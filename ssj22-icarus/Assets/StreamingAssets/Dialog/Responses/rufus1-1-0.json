@@ -1,0 +1,37 @@
+[
+    {
+        "text": "I've never heard of any free restaurants in town. What's this place called?",
+        "dialogIndex": 3,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "The Halo Factorium? Not a bad job. Have you been keeping up with the work? Any issues with the boss?",
+        "dialogIndex": 7,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "*Salute him back* Glad to meet a true hero!",
+        "dialogIndex": 11,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

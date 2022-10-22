@@ -1,0 +1,37 @@
+[
+    {
+        "text": "What do you know about the inquisition?",
+        "dialogIndex": 29,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Yeah, you're being interviewed.",
+        "dialogIndex": 33,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Lie> Fuck 'em. Pigs.",
+        "dialogIndex": 37,
+        "action": {
+            "score": 3,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

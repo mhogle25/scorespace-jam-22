@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Where'd you get this food, Rufus?",
+        "dialogIndex": 34,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "I don't want your scraps, drunkard. Tell me about the restaurant or I pull the lever.",
+        "dialogIndex": 35,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Take Bribe> Okay, Rufus. I'll bite. He's in the back, actually, slotted for today's interviews.",
+        "dialogIndex": 36,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":1
+        },
+        "prereq": {
+        }
+    }
+    
+]

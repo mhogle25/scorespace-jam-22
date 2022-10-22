@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Yeah it sounds great. Hey, have you been drinking? I was wondering where I could go and get one after work. Any recommendations?",
+        "dialogIndex": 16,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Must've been quite the party. Can you introduce me to some of your friends? They sound great.",
+        "dialogIndex": 20,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Wails? Could it be a ghost?",
+        "dialogIndex": 24,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]
