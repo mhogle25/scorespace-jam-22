@@ -302,6 +302,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5355152501364548564, guid: c619287d94d448f44b1bd5a2fe2ed2b5, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 5355152501364548565, guid: c619287d94d448f44b1bd5a2fe2ed2b5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -389,10 +393,6 @@ PrefabInstance:
     - target: {fileID: 5355152501364548569, guid: c619287d94d448f44b1bd5a2fe2ed2b5, type: 3}
       propertyPath: m_Name
       value: Textbox Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355152501865692820, guid: c619287d94d448f44b1bd5a2fe2ed2b5, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c619287d94d448f44b1bd5a2fe2ed2b5, type: 3}
