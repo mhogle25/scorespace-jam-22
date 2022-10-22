@@ -4,38 +4,39 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
 
 public class CourtRoomManager : MonoBehaviour
 {
+    [SerializeField] private Fallen initFallen = null;
+    [SerializeField] private List<Fallen> fallenList = new();
     [SerializeField] private BF2D.UI.DialogTextbox dialogTextbox;
     [SerializeField] private Image overlay = null;
     [SerializeField] private float overlayFadeRate = 0.001f;
-    [SerializeField] private UnityEvent<bool> onPauseKey = new();
 
-    private static bool paused = false;
+    private Queue<Fallen> fallenQueue = new();
+
+    public Score GetScore
+    {
+        get
+        {
+            return this.currentScore;
+        }
+    }
+    private Score currentScore = new();
 
     Action state;
-    Action listeners;
 
     private void Awake()
     {
-        listeners += OptionsListener;
         state = StateFadeIn;
-        paused = false;
     }
 
     private void Update()
     {
         state?.Invoke();
-        listeners?.Invoke();
-    }
-
-    private void OptionsListener()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Pause();
-        }
     }
 
     private void StateFadeIn()
@@ -58,15 +59,36 @@ public class CourtRoomManager : MonoBehaviour
         yield return new WaitForSeconds(3);
         dialogTextbox.Message("[N:Inquisitor][S:0.1]Have the first fallen enter.", () =>
         {
-            //Start the queue
+            this.fallenQueue.Enqueue(this.initFallen);
+            System.Random rand = new System.Random();
+            List<Fallen> shuffled = this.fallenList.OrderBy(_ => rand.Next()).ToList();
+            foreach (Fallen f in fallenList)
+            {
+                this.fallenQueue.Enqueue(f);
+            }
+
+            StartNextFallen();
         });
         dialogTextbox.UtilityInitialize();
     }
 
-    public void Pause()
+    private void StartNextFallen()
     {
-        CourtRoomManager.paused = !CourtRoomManager.paused;
-        onPauseKey.Invoke(paused);
+        Fallen fallen = this.fallenQueue.Dequeue();
+        fallen.Begin(this, dialogTextbox, () =>
+        {
+            FinalizeEncounter();
+        });
+    }
+
+    private void FinalizeEncounter()
+    {
+
+    }
+
+    private void FinalizeGame()
+    {
+
     }
 
     public void LoadMainMenu()

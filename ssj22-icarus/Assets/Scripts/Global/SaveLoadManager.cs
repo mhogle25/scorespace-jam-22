@@ -44,13 +44,9 @@ public class SaveLoadManager
             }
         }
 
-        public void AddScore(string name, int score)
+        public void AddScore(Score score)
         {
-            this.scores.Add(new Score
-            {
-                name = name,
-                score = score
-            });
+            this.scores.Add(score);
         }
     }
 
@@ -89,8 +85,8 @@ public class SaveLoadManager
         }
     }
 
-    public void NewScore(string name, int score)
+    public void NewScore(Score score)
     {
-        this.saveData.AddScore(name, score);
+        this.saveData.AddScore(score);
     }
 }

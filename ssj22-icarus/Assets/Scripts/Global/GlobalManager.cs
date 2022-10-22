@@ -42,9 +42,9 @@ public class GlobalManager : MonoBehaviour
         }
     }
 
-    public void NewScore(string name, int score)
+    public void NewScore(Score score)
     {
-        this.saveLoadManager.NewScore(name, score);
+        this.saveLoadManager.NewScore(score);
     }
 
     public void SaveGame()
