@@ -16,4 +16,9 @@ public class DialogTextboxTester : MonoBehaviour
             0
         );
     }
+
+    public void Print(string value)
+    {
+        Debug.Log(value);
+    }
 }

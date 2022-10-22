@@ -43,7 +43,8 @@ namespace BF2D.UI {
         [Header("Dialog Responses")]
         public bool ResponseOptionsEnabled = true;
         [SerializeField] private string responseOptionsFilesPath = string.Empty;
-        [SerializeField] private LayoutGroup responseOptionsControl = null;
+        [SerializeField] private Button responseOptionPrefab = null;
+        [SerializeField] private LayoutGroup responseOptionsLayoutGroup = null;
         [SerializeField] private GameCondition prereqConditionChecker = null;
         
         [Serializable] public class ResponseOptionEvent : UnityEvent<string> { }
@@ -589,60 +590,51 @@ namespace BF2D.UI {
 
         private void SetupResponses(List<ResponseData> options)
         {
-            /*
-            this.responseOptionsControl.OptionsGrid.Setup(1, options.Count);
-
-            foreach (ResponseData option in options)
+            Button[] previousOptions = this.responseOptionsLayoutGroup.GetComponentsInChildren<Button>();
+            foreach (Button button in previousOptions)
             {
-                try
-                {
-                    if (this.prereqConditionChecker)
-                    {
-                        if (this.prereqConditionChecker.CheckCondition(option.prereq.ToString()))
-                        {
-                            continue;
-                        }
-                    }
-
-                    this.responseOptionsControl.OptionsGrid.Add(new UIOption.Data
-                    {
-                        text = option.text,
-                        actions = new InputButtonCollection<Action>
-                        {
-                            [InputButton.Confirm] = () =>
-                            {
-                                if (this.responseOptionEvent != null)
-                                {
-                                    this.responseOptionEvent.Invoke(option.action.ToString());
-                                }
-                                FinalizeResponse(option.dialogIndex);
-                            }
-                        }
-                    }); 
-                } 
-                catch (Exception x)
-                {
-                    throw x;
-                }
+                Destroy(button.gameObject);
             }
 
-            UIControlsManager.Instance.TakeControl(this.responseOptionsControl);
-            this.responseOptionsControl.OptionsGrid.SetCursorAtHead();
-            */
+            foreach (ResponseData responseData in options)
+            {
+                if (this.prereqConditionChecker)
+                {
+                    if (this.prereqConditionChecker.CheckCondition(responseData.prereq.ToString()))
+                    {
+                        continue;
+                    }
+                }
+
+                Button option = Instantiate(this.responseOptionPrefab);
+                TextMeshProUGUI text = option.gameObject.GetComponentInChildren<TextMeshProUGUI>();
+                option.transform.SetParent(this.responseOptionsLayoutGroup.transform);
+                option.transform.localScale = Vector3.one;
+                text.text = responseData.text;
+                option.onClick.AddListener(() =>
+                {
+                    if (this.responseOptionEvent != null)
+                    {
+                        this.responseOptionEvent.Invoke(responseData.action.ToString());
+                    }
+                    FinalizeResponse(responseData.dialogIndex);
+                });
+            }
+
+            UtilityFinalize();
+            this.responseOptionsLayoutGroup.gameObject.SetActive(true);
         }
 
         private void FinalizeResponse(int dialogIndex)
         {
-            /*
             if (dialogIndex != DialogTextbox.defaultValue)
             {
                 this.nextDialogIndex = dialogIndex;
             }
-            this.responseOptionsControl.gameObject.SetActive(false);
+            this.responseOptionsLayoutGroup.gameObject.SetActive(false);
             this.pass = true;
             this.state = MessageParseAndDisplayClocked;
-            UIControlsManager.Instance.PassControlBack();
-            */
+            UtilityInitialize();
         }
         #endregion
 
