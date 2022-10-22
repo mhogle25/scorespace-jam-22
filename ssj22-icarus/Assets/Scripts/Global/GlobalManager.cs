@@ -1,16 +1,17 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 
-public class GameManager : MonoBehaviour
+public class GlobalManager : MonoBehaviour
 {
-    public static GameManager Instance
+    public static GlobalManager Instance
     {
         get
         {
-            return GameManager.instance;
+            return GlobalManager.instance;
         }
     }
-    private static GameManager instance = null;
+    private static GlobalManager instance = null;
 
     private readonly SaveLoadManager saveLoadManager = new();
 
@@ -18,9 +19,9 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
 
-        if (GameManager.instance != this && GameManager.instance != null)
-            Destroy(GameManager.instance.gameObject);
-        GameManager.instance = this;
+        if (GlobalManager.instance != this && GlobalManager.instance != null)
+            Destroy(GlobalManager.instance.gameObject);
+        GlobalManager.instance = this;
 
         LoadGame();
     }
@@ -33,9 +34,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public Score PopScore()
+    public List<Score> Scores
     {
-        return this.saveLoadManager.PopScore();
+        get
+        {
+            return this.saveLoadManager.Scores;
+        }
     }
 
     public void NewScore(string name, int score)

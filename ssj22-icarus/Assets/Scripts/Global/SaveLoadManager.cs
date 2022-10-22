@@ -4,45 +4,53 @@ using DataStructures.PriorityQueue;
 using Newtonsoft.Json;
 using System.IO;
 using System;
+using System.Linq;
 
 public class SaveLoadManager
 {
     [Serializable]
     private class SaveData
     {
-        [JsonIgnore] public readonly PriorityQueue<Score, int> highScoresQueue = new(0);
-        [JsonIgnore] public int queueCount = 0;
-        [JsonProperty] public readonly List<Score> scores = new();
+        [JsonProperty] private readonly List<Score> scores = new();
 
-        [JsonIgnore] public Score HighScore
+        [JsonIgnore]
+        public Score HighScore
         {
             get
             {
-                if (this.queueCount < 1)
+                Score max = new()
                 {
-                    FillQueue();
+                    score = int.MinValue,
+                };
+                foreach (Score score in this.scores)
+                {
+                    if (score.score > max.score) max = score;
                 }
-
-                return this.highScoresQueue.Top();
+                return max;
             }
         }
 
-        public void FillQueue()
+        [JsonIgnore]
+        public List<Score> Scores
         {
-            foreach (Score score in this.scores)
+            get
             {
-                this.highScoresQueue.Insert(score, score.score);
+                this.Scores.Sort((x, y) =>
+                {
+                    return x.score.CompareTo(y.score);
+                });
+
+                return scores;
             }
         }
 
-        public Score PopQueue()
+        public void AddScore(string name, int score)
         {
-            if (this.queueCount < 1)
+            this.scores.Add(new Score
             {
-                FillQueue();
-            }
-
-            return this.highScoresQueue.Pop();
+                name = name,
+                score = score
+            });
         }
     }
 
@@ -54,19 +62,26 @@ public class SaveLoadManager
         }
     }
 
+    public List<Score> Scores
+    {
+        get
+        {
+            return this.saveData.Scores;
+        }
+    }
+
     private SaveData saveData = new();
 
     public void SaveGame()
     {
-        File.WriteAllText(Path.Combine(Application.persistentDataPath, "save", "save.json"), JsonConvert.SerializeObject(this.saveData));
+        File.WriteAllText(Path.Combine(Application.persistentDataPath, "save.json"), JsonConvert.SerializeObject(this.saveData));
     }
 
     public void LoadGame()
-    {
-        string path = Path.Combine(Application.persistentDataPath, "save", "save.json");
-        if (File.Exists(path))
+    {;
+        if (File.Exists(Path.Combine(Application.persistentDataPath, "save.json")))
         {
-            this.saveData = JsonConvert.DeserializeObject<SaveData>(File.ReadAllText(path));
+            this.saveData = JsonConvert.DeserializeObject<SaveData>(File.ReadAllText(Path.Combine(Application.persistentDataPath, "save.json")));
         } 
         else
         {
@@ -74,20 +89,8 @@ public class SaveLoadManager
         }
     }
 
-    public Score PopScore()
-    {
-        return this.saveData.PopQueue();
-    }
-
     public void NewScore(string name, int score)
     {
-        Score newScore = new Score
-        {
-            name = name,
-            score = score
-        };
-
-        this.saveData.highScoresQueue.Insert(newScore, score);
-        this.saveData.scores.Add(newScore);
+        this.saveData.AddScore(name, score);
     }
 }

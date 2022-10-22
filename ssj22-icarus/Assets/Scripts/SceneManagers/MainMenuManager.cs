@@ -5,7 +5,7 @@ public class MainMenuManager : MonoBehaviour
 {
     public void QuitGame()
     {
-        GameManager.Instance.SaveGame();
+        GlobalManager.Instance.SaveGame();
         Application.Quit();
     }
 
