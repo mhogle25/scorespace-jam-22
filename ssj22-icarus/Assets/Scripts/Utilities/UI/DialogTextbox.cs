@@ -46,9 +46,11 @@ namespace BF2D.UI {
         [SerializeField] private Button responseOptionPrefab = null;
         [SerializeField] private LayoutGroup responseOptionsLayoutGroup = null;
         [SerializeField] private GameCondition prereqConditionChecker = null;
-        
-        [Serializable] public class ResponseOptionEvent : UnityEvent<string> { }
-        [SerializeField] private ResponseOptionEvent responseOptionEvent = new();
+
+        [Serializable] public class ResponseOptionStartEvent : UnityEvent { }
+        [SerializeField] private ResponseOptionStartEvent responseOptionStartEvent = new();
+        [Serializable] public class ResponseOptionEndEvent : UnityEvent<string> { }
+        [SerializeField] private ResponseOptionEndEvent responseOptionEndEvent = new();
 
         [Header("Audio")]
         [SerializeField] private AudioClipCollection voiceCollection;
@@ -263,6 +265,14 @@ namespace BF2D.UI {
             else if (this.state == EndOfLine || this.state == EndOfDialog)
             {
                 this.continueFlag = true;
+            }
+        }
+
+        public void Interrupt()
+        {
+            while (this.interactable)
+            {
+                Continue();
             }
         }
 
@@ -485,7 +495,9 @@ namespace BF2D.UI {
                             }
 
                             if (this.ResponseOptionsEnabled)
+                            {
                                 SetupResponses(options);
+                            }
 
                             this.messageIndex = newMessageIndex + 1;
                         } else
@@ -590,6 +602,8 @@ namespace BF2D.UI {
 
         private void SetupResponses(List<ResponseData> options)
         {
+            this.responseOptionStartEvent.Invoke();
+
             Button[] previousOptions = this.responseOptionsLayoutGroup.GetComponentsInChildren<Button>();
             foreach (Button button in previousOptions)
             {
@@ -613,9 +627,9 @@ namespace BF2D.UI {
                 text.text = responseData.text;
                 option.onClick.AddListener(() =>
                 {
-                    if (this.responseOptionEvent != null)
+                    if (this.responseOptionEndEvent != null)
                     {
-                        this.responseOptionEvent.Invoke(responseData.action.ToString());
+                        this.responseOptionEndEvent.Invoke(responseData.action.ToString());
                     }
                     FinalizeResponse(responseData.dialogIndex);
                 });

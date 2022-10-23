@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.erdiizgi.datastructures": {
-      "version": "https://github.com/erdiizgi/DSUnity.git#v0.0.2",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "650007855ae04e4cf210a1259cb11ee67ad318ad"
-    },
     "com.unity.2d.animation": {
       "version": "7.0.6",
       "depth": 1,
