@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8555457058165799007}
   - component: {fileID: 8555457058165799000}
   m_Layer: 0
-  m_Name: Jeff
+  m_Name: Barabbas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b3b9caa546c35249bf4d734279a8eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogFileName: Rufus
+  dialogFileName: Barabbas
   speed: 8
 --- !u!212 &8555457058165799000
 SpriteRenderer:

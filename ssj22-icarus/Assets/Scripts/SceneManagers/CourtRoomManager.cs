@@ -19,6 +19,7 @@ public class CourtRoomManager : MonoBehaviour
     [SerializeField] private Transform background = null;
     [SerializeField] private Lever lever = null;
     [SerializeField] private TextMeshProUGUI scoreDisplay = null;
+    [SerializeField] private DisplayOverlay displayOverlay = null;
     [Header("Misc")]
     [SerializeField] private Image overlay = null;
     [SerializeField] private float overlayFadeRate = 0.001f;
@@ -87,8 +88,14 @@ public class CourtRoomManager : MonoBehaviour
         dialogTextbox.UtilityInitialize();
     }
 
-    private IEnumerator Begin()
+    private IEnumerator TransitionBetweenFallen()
     {
+        this.displayOverlay.gameObject.SetActive(true);
+        this.displayOverlay.ChangeToOpenHatch();
+        yield return new WaitForSeconds(1);
+        this.displayOverlay.ChangeToClosedHatch();
+        yield return new WaitForSeconds(1);
+        this.displayOverlay.ChangeToFalling();
         yield return new WaitForSeconds(5);
         this.lever.Pull();
         yield return new WaitForSeconds(2);
@@ -97,6 +104,11 @@ public class CourtRoomManager : MonoBehaviour
             StartNextFallen();
         });
         dialogTextbox.UtilityInitialize();
+    }
+
+    public void Continue()
+    {
+        StartCoroutine(TransitionBetweenFallen());
     }
 
     private void StartNextFallen()
@@ -111,6 +123,10 @@ public class CourtRoomManager : MonoBehaviour
         fallen = Instantiate(fallen);
         fallen.transform.SetParent(this.background);
         fallen.transform.localScale = Vector3.one;
+        fallen.onDeath.AddListener(() =>
+        {
+            Continue();
+        });
         fallen.Begin(dialogTextbox, lever, () =>
         {
             PullLever(fallen);
@@ -136,7 +152,6 @@ public class CourtRoomManager : MonoBehaviour
     {
         this.lever.Pull();
         fallen.Fall();
-        StartCoroutine(Begin());
     }
 
     private void BeginGodEncounter()

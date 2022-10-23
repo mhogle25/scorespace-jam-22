@@ -34,6 +34,7 @@ public class Timer : MonoBehaviour
     private void OnEnable()
     {
         slider.value = 1;
+        this.sliderFill.color = Color.white;
     }
 
     private float timeAccumulator = 0;

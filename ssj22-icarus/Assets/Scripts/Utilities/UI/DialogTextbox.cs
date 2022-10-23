@@ -45,7 +45,8 @@ namespace BF2D.UI {
         public bool ResponseOptionsEnabled = true;
         [SerializeField] private string responseOptionsFilesPath = string.Empty;
         [SerializeField] private Button responseOptionPrefab = null;
-        [SerializeField] private LayoutGroup responseOptionsLayoutGroup = null;
+        [SerializeField] private RectTransform responseOptionsPanel = null;
+        [SerializeField] private VerticalLayoutGroup responseOptionsContainer = null;
         [SerializeField] private GameCondition prereqConditionChecker = null;
 
         [Serializable] public class ResponseOptionStartEvent : UnityEvent { }
@@ -275,7 +276,7 @@ namespace BF2D.UI {
             ResetControlVariables(0);
             this.textField.text = string.Empty;
             this.scrollbar.value = 1;
-            this.responseOptionsLayoutGroup.gameObject.SetActive(false);
+            this.responseOptionsPanel.gameObject.SetActive(false);
             UtilityFinalize();
             //Reset the State
             this.state = DialogQueueHandler;
@@ -625,7 +626,7 @@ namespace BF2D.UI {
         {
             this.responseOptionStartEvent.Invoke();
 
-            Button[] previousOptions = this.responseOptionsLayoutGroup.GetComponentsInChildren<Button>();
+            Button[] previousOptions = this.responseOptionsContainer.GetComponentsInChildren<Button>();
             foreach (Button button in previousOptions)
             {
                 Destroy(button.gameObject);
@@ -643,7 +644,7 @@ namespace BF2D.UI {
 
                 Button option = Instantiate(this.responseOptionPrefab);
                 TextMeshProUGUI text = option.gameObject.GetComponentInChildren<TextMeshProUGUI>();
-                option.transform.SetParent(this.responseOptionsLayoutGroup.transform);
+                option.transform.SetParent(this.responseOptionsContainer.transform);
                 option.transform.localScale = Vector3.one;
                 text.text = responseData.text;
                 option.onClick.AddListener(() =>
@@ -657,7 +658,7 @@ namespace BF2D.UI {
             }
 
             UtilityFinalize();
-            this.responseOptionsLayoutGroup.gameObject.SetActive(true);
+            this.responseOptionsPanel.gameObject.SetActive(true);
         }
 
         private void FinalizeResponse(int dialogIndex)
@@ -666,7 +667,7 @@ namespace BF2D.UI {
             {
                 this.nextDialogIndex = dialogIndex;
             }
-            this.responseOptionsLayoutGroup.gameObject.SetActive(false);
+            this.responseOptionsPanel.gameObject.SetActive(false);
             this.pass = true;
             this.state = MessageParseAndDisplayClocked;
             UtilityInitialize();

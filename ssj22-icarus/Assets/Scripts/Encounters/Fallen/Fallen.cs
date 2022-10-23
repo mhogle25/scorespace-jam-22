@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Fallen : MonoBehaviour
 {
     [SerializeField] private string dialogFileName = string.Empty;
     [SerializeField] private float speed = 8f;
 
+    public readonly UnityEvent onDeath = new();
     private BF2D.UI.DialogTextbox dialogTextbox = null;
     private Lever lever = null;
     private Action callback = null;
@@ -24,7 +26,7 @@ public class Fallen : MonoBehaviour
         this.lever = lever;
         this.callback = callback;
 
-        this.transform.localPosition = Vector3.zero;
+        this.transform.localPosition = Vector3.zero - new Vector3(0, 0.5f, 0);
         this.transform.localPosition -= new Vector3(8f, 0f, 0f);
         this.state = StateEnter;
     }
@@ -42,6 +44,7 @@ public class Fallen : MonoBehaviour
         if (this.transform.localPosition.y < -4)
         {
             Destroy(this.gameObject);
+            this.onDeath?.Invoke();
         }
     }
 
