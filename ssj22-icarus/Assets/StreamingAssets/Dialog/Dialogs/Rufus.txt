@@ -17,7 +17,7 @@
 [N:?]I think it might be pretty high,[P:0.5] but it's fine.[P:0.5] I'm sure you can tell,[P:0.5] but I'm a real charming guy so I always get out of it.[E]
 [N:?]Yeah he keeps saying things like: ‘Here comes Rufus again.[P:0.5] I hope he doesn't vomit on everything like last Tuesday.[P:0.5]' You know.[P:0.5] Regular banter.[E]
 [N:?]I thought we were friends man?[P:0.5] Why you gotta keep judging me all the time.[P:0.5] You know what?[P:0.5] I'm leaving.[E]
-[N:?]Well you know Ishmael Jones already.[P:0.5] As for everyone else we got uh Josiah Owens and Vashti Mendez I think.[P:0.5] I'll show you them sometime![P:0.5] Anyway is Ishmael here?[P:0.5] He didn't come back and I'm starting to get worried.[R:rufus1-2-2]
+[N:?]Well you know Ishmael Jones already.[P:0.5] As for everyone else we got uh [P:0.5] Josiah Owens and Vashti Mendez I think.[P:0.5] I'll show you them sometime![P:0.5] Anyway[P:0.5] is Ishmael here?[P:0.5] He didn't come back and I'm starting to get worried.[R:rufus1-2-2]
 [N:?]I'm sorry![P:0.5] I didn't mean anything by it.[P:0.5] It was a fun time and I was drunk and you can't blame someone for that right?[P:0.5] Just stop screaming and let me out of here,[P:0.5] please![E]
 [N:?]Uh I don't know they sometimes go to the Devil's Nipple on Fourth and Main.[P:0.5] Other times they're just working at the factory.[P:0.5] Look this office is kinda stuffy.[P:0.5] Can I get out?[P:0.5][E]
 [N:?]Well if you say he's fine.[P:0.5] You're a real upstanding guy,[P:0.5] you know that?[P:0.5] I'm glad we're friends.[P:0.5] We were drunk and I don't think you'd know this about me but sometimes we do stupid things when we're drunk.[P:0.5] We just wanted a good time was all.[P:0.5] Hungry after a good drink that's it.[E]

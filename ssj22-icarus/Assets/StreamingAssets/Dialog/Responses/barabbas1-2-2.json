@@ -1,9 +1,9 @@
 [
     {
-        "text": "*Get up from your chair* Shut up you damnable drunk! What did Josiah and Vashti do?",
+        "text": "'Just like me?' What is that some kind of threat?",
         "dialogIndex": 20,
         "action": {
-            "score": 0,
+            "score": 3,
             "morale": 0,
             "bribe":0
 
@@ -12,7 +12,7 @@
         }
     },
     {
-        "text": "I'm curious about your other friends. Where do they usually hang out in their day-to-day?",
+        "text": "Be honest, you can be redeemed in the eyes of the Lord.",
         "dialogIndex": 21,
         "action": {
             "score": 3,
@@ -23,11 +23,11 @@
         }
     },
     {
-        "text": "<Lie> Ishmael is doing fine, but he's worried. Why did you go to the restaurant?",
+        "text": "No time to relax? Then what else is occupying your time?",
         "dialogIndex": 22,
         "action": {
-            "score": 3,
-            "morale": 1,
+            "score": 0,
+            "morale": 0,
             "bribe":0
         },
         "prereq": {

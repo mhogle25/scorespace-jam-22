@@ -1,0 +1,37 @@
+[
+    {
+        "text": "What do they mean? I think you know by now. It means you're a Fallen. Stop trying to be coy and tell me what crime you committed.",
+        "dialogIndex": 7,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Look, I'm sorry. I want to help people. If you can tell me what you did we can try to bring angels back to redemption.",
+        "dialogIndex": 8,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Lie> Tell me and I let you go. Simple as that. You're not getting out of this otherwise and you need someone on your corner. Let me be that person.",
+        "dialogIndex": 9,
+        "action": {
+            "score": 0,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]
