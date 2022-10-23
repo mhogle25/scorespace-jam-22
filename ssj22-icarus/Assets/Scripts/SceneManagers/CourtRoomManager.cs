@@ -19,6 +19,7 @@ public class CourtRoomManager : MonoBehaviour
     [SerializeField] private Transform background = null;
     [SerializeField] private Lever lever = null;
     [SerializeField] private TextMeshProUGUI scoreDisplay = null;
+    [SerializeField] private DisplayOverlay displayOverlay = null;
     [Header("Misc")]
     [SerializeField] private Image overlay = null;
     [SerializeField] private float overlayFadeRate = 0.001f;
@@ -89,7 +90,13 @@ public class CourtRoomManager : MonoBehaviour
 
     private IEnumerator Begin()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
+        this.displayOverlay.gameObject.SetActive(true);
+        this.displayOverlay.ChangeToOpenHatch();
+        yield return new WaitForSeconds(1);
+        this.displayOverlay.ChangeToClosedHatch();
+        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1);
         this.lever.Pull();
         yield return new WaitForSeconds(2);
         dialogTextbox.Message("[N:Inquisitor][S:0.1]Have the next fallen enter.", () =>
