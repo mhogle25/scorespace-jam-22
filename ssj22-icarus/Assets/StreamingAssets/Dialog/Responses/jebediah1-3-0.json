@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Tell me what you've done Jebediah, that's all that needs to happen. We won't have to do anything else.",
+        "dialogIndex": 28,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Unpaid interns?",
+        "dialogIndex": 32,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Punch him> Yeah, but I'd harm a hair on yours.",
+        "dialogIndex": 36,
+        "action": {
+            "score": 0,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

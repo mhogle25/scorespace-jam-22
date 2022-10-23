@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Tell me what you know or you're getting some more shit.",
+        "dialogIndex": 37,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "You always this stubborn, Jay?",
+        "dialogIndex": 38,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Punch him>",
+        "dialogIndex": 39,
+        "action": {
+            "score": 1,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

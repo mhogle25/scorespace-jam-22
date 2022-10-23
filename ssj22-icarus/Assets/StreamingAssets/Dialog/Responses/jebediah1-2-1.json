@@ -1,0 +1,37 @@
+[
+    {
+        "text": "*Spit back again*.",
+        "dialogIndex": 16,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "You done?",
+        "dialogIndex": 17,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "The Inquisition thanks you, Jebediah.",
+        "dialogIndex": 18,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

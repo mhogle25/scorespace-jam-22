@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Where do you go for privacy, Jebediah Jameson?",
+        "dialogIndex": 7,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Fine, Jay. Have it your way.",
+        "dialogIndex": 8,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Lie> You should know then, that we have extra-prying eyes. We know everything, Jay. All that’s left is for you to come clean. Maybe I can work something out.",
+        "dialogIndex": 9,
+        "action": {
+            "score": 1,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

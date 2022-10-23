@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Not here they don’t. What is it Jay? Let’s get this over with.",
+        "dialogIndex": 11,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "You’ve got dirt in spades, Jay.",
+        "dialogIndex": 12,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Lie> Guess we’ll have to dig apart the Congregation. You know we will, Jay. We’ll find what we’ll find.",
+        "dialogIndex": 13,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

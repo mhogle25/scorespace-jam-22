@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Tell you what. We'll let your friends off the hook. We can end the chain here. You just have to talk.",
+        "dialogIndex": 24,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "C'mon, I'll toss a candybar down with you.",
+        "dialogIndex": 25,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "This is your last chance, Jebediah.",
+        "dialogIndex": 26,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

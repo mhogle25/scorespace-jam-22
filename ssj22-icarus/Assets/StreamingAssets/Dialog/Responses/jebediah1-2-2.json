@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Yeah? Any special ingredients? Maybe a narcotics shipment or two?",
+        "dialogIndex": 20,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "You go for any brews as of late, Jay? What’s your favorite speakeasy, huh?",
+        "dialogIndex": 21,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "I can smell it on your breath, Jay. Special brew, huh?",
+        "dialogIndex": 22,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

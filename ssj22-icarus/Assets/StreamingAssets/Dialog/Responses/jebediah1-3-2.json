@@ -1,0 +1,37 @@
+[
+    {
+        "text": "How many businesses do you own?",
+        "dialogIndex": 33,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "What do you know about labor law, Jay?",
+        "dialogIndex": 34,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Lie> We know exactly what kind of businesses you own, Jay.",
+        "dialogIndex": 35,
+        "action": {
+            "score": 0,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

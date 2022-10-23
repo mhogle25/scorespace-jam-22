@@ -1,0 +1,37 @@
+[
+    {
+        "text": "*Spit back*.",
+        "dialogIndex": 15,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "That’s disgusting, Jay. Smells like shit.",
+        "dialogIndex": 19,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Y’know what… My bad, Jebediah. I went too far. Help an angel out, huh?",
+        "dialogIndex": 23,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]
