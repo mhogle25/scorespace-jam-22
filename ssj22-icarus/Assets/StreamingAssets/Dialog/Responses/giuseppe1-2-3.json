@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Why did you do it Giuseppe? No one would do something like this without a motive.",
+        "dialogIndex": 24,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "How did you do it Giuseppe? The factorium doors were locked.",
+        "dialogIndex": 25,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Where did you get the worms Giuseppe?",
+        "dialogIndex": 26,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

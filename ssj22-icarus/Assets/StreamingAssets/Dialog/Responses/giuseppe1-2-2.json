@@ -1,0 +1,37 @@
+[
+    {
+        "text": "You’re lying again Giuseppe. Your wings are turning darker. Just give it up",
+        "dialogIndex": 20,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "You have no job, huh? Then how did you get into the factory?",
+        "dialogIndex": 21,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Gesture to lever> Then I guess I have no use for you.",
+        "dialogIndex": 22,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

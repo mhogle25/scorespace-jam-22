@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Of course, of course. What's your wife's name Giuseppe?",
+        "dialogIndex": 28,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Oh? Where do you work, Giuseppe?",
+        "dialogIndex": 32,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Lie> You're lying Giuseppe. We have a witness who saw you at the spaghetti factorium last night.",
+        "dialogIndex": 36,
+        "action": {
+            "score": 0,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Whoa easy buddy no one is accusing you of anything. Why don't you tell me about yourself? What's your line of work?",
+        "dialogIndex": 1,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Cut the shit pal I know you switched out the spaghetti with worms",
+        "dialogIndex": 14,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Where were you last night between the hours of 10pm and 1am?",
+        "dialogIndex": 27,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

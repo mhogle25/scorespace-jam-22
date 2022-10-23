@@ -1,0 +1,37 @@
+[
+    {
+        "text": "You sound like you're not sure, Giuseppe.",
+        "dialogIndex": 29,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Marga? Lovely name. Does Marga know you switched out the spaghetti with worms?",
+        "dialogIndex": 30,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "I'm not playing these games, Giuseppe. I know you made that up, now tell me why you stole the spaghetti and replaced it with worms.",
+        "dialogIndex": 31,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]
