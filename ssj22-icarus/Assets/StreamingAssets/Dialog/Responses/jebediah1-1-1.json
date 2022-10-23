@@ -1,6 +1,6 @@
 [
     {
-        "text": "Then you should know that what’s going to happen can’t be stopped. Help me out here. While ya’ still can.",
+        "text": "Then you should know that what's going to happen can't be stopped. Help me out here. While ya' still can.",
         "dialogIndex": 3,
         "action": {
             "score": 0,
@@ -12,7 +12,7 @@
         }
     },
     {
-        "text": "There’s a difference between being out of here with a clean conscience and being out of here with one as dirty as your wings.",
+        "text": "There's a difference between being out of here with a clean conscience and being out of here with one as dirty as your wings.",
         "dialogIndex": 4,
         "action": {
             "score": 3,
@@ -23,7 +23,7 @@
         }
     },
     {
-        "text": "Alright, see ya’ later Jebediah J. Jameson.",
+        "text": "Alright, see ya' later Jebediah J. Jameson.",
         "dialogIndex": 5,
         "action": {
             "score": 0,

@@ -1,6 +1,6 @@
 [
     {
-        "text": "Sir, please calm down. We just want to know how you came to be here. Tell us about how you came by those Fallen wings of yours. You can’t hide them.",
+        "text": "Sir, please calm down. We just want to know how you came to be here. Tell us about how you came by those Fallen wings of yours. You can't hide them.",
         "dialogIndex": 1,
         "action": {
             "score": 0,
@@ -12,7 +12,7 @@
         }
     },
     {
-        "text": "You’re full of shit, Jebediah. Everyone knows the Congregation is a tabloid. No one will believe it or give it a fuck.",
+        "text": "You're full of shit, Jebediah. Everyone knows the Congregation is a tabloid. No one will believe it or give it a fuck.",
         "dialogIndex": 14,
         "action": {
             "score": 1,
@@ -23,7 +23,7 @@
         }
     },
     {
-        "text": "<Lie> Jebediah, if anything happened, the Inquisition would come down on it harder than my Aunt Carol at a Crate & Barrel. You’d be done for.",
+        "text": "<Lie> Jebediah, if anything happened, the Inquisition would come down on it harder than my Aunt Carol at a Crate & Barrel. You'd be done for.",
         "dialogIndex": 27,
         "action": {
             "score": 1,
