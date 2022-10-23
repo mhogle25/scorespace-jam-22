@@ -78,7 +78,7 @@ public class CourtRoomManager : MonoBehaviour
             this.fallenQueue.Enqueue(this.initFallenPrefab);
             System.Random rand = new System.Random();
             List<Fallen> shuffled = this.fallenPrefabs.OrderBy(_ => rand.Next()).ToList();
-            foreach (Fallen f in fallenPrefabs)
+            foreach (Fallen f in shuffled)
             {
                 this.fallenQueue.Enqueue(f);
             }

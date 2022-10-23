@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8555457058165799007}
   - component: {fileID: 8555457058165799000}
   m_Layer: 0
-  m_Name: Barabbas
+  m_Name: Jebediah
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b3b9caa546c35249bf4d734279a8eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogFileName: Barabbas
+  dialogFileName: Jebediah
   speed: 8
 --- !u!212 &8555457058165799000
 SpriteRenderer:
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: d2f781967c05d344eae9b00e4b2d61da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 589bb2b8f396c864f9a4b57042fa9f65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
