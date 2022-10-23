@@ -1,6 +1,6 @@
 [
     {
-        "text": "C’mon Jay, work with me. What were you doing when you first turned. The sooner we get this done, the sooner we’re both out of here.",
+        "text": "C'mon Jay, work with me. What were you doing when you first turned. The sooner we get this done, the sooner we're both out of here.",
         "dialogIndex": 2,
         "action": {
             "score": 0,
@@ -23,7 +23,7 @@
         }
     },
     {
-        "text": "You’re a real good angel, Jay. I’m sure nothing would come up with just a little bit of digging, huh?",
+        "text": "You're a real good angel, Jay. I'm sure nothing would come up with just a little bit of digging, huh?",
         "dialogIndex": 10,
         "action": {
             "score": 1,
