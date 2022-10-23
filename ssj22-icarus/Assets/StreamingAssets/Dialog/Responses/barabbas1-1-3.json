@@ -1,0 +1,37 @@
+[
+    {
+        "text": "A business leader is supposed to be a role model. A role model proves to the community he's trustworthy. Prove that to us.",
+        "dialogIndex": 11,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "I think we will. You won't need to tell us a thing, the records will prove it. Have a safe trip down!",
+        "dialogIndex": 12,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Skills? What skills? You're a third-rate salesman with a fourth-rate business. I think we're done here.",
+        "dialogIndex": 13,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

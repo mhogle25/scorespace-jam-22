@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Thanks for your help, Mr. Sutton. We just wanted to clarify a few things and understand what's going on. Have you had any troubles at work recently?",
+        "dialogIndex": 1,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Sutton, we know something's wrong. Your black wings are proof. If you really want to help us, then tell us.",
+        "dialogIndex": 14,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Punch him> Start talking Barabbas, you little shit! What did you do?",
+        "dialogIndex": 27,
+        "action": {
+            "score": 3,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

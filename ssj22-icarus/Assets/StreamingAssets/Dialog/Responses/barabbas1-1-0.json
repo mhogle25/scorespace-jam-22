@@ -1,0 +1,37 @@
+[
+    {
+        "text": "But surely even a good workplace has to have enemies right?",
+        "dialogIndex": 2,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Yeah, I'm sure. And that's why you have black wings? Because of your kindness and generosity?",
+        "dialogIndex": 6,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Good workplace? Don't be ridiculous. I know you have a secret to your success. How would you like a full accounting of your business?",
+        "dialogIndex": 10,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

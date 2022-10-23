@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Friendly competition? I'm sure all businessmen would say that about their rivals, but how true does that hold up?",
+        "dialogIndex": 3,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Divinity Farms is a nice place. You ever visit the premises? Maybe see the owner?",
+        "dialogIndex": 4,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Were any of your workers associated with the people at Divinity Farms?",
+        "dialogIndex": 5,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

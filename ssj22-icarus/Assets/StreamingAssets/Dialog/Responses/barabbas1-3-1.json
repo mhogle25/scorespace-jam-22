@@ -1,0 +1,37 @@
+[
+    {
+        "text": "You never stole anything larger? More expensive?",
+        "dialogIndex": 29,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Why would a wealthy businessman need to steal pens and papers?",
+        "dialogIndex": 30,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Are you sure you can't control it?",
+        "dialogIndex": 31,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]
