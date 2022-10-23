@@ -1,7 +1,7 @@
 [
     {
         "text": "Who are you?",
-        "dialogIndex": 2,
+        "dialogIndex": 1,
         "action": {
             "score": 1,
             "morale": 0,
@@ -13,7 +13,7 @@
     },
     {
         "text": "What restaurant? What are you talking about?",
-        "dialogIndex": 2,
+        "dialogIndex": 14,
         "action": {
             "score": 3,
             "morale": 0,
@@ -24,7 +24,7 @@
     },
     {
         "text": "<Lie> Yeah, I know Ishmael. He was asking about you.",
-        "dialogIndex": 2,
+        "dialogIndex": 27,
         "action": {
             "score": 3,
             "morale": 1,

@@ -1,7 +1,7 @@
 [
     {
         "text": "You're a good guy. What kind of restaurant did you and Ishmael go to, anyway?",
-        "dialogIndex": 38,
+        "dialogIndex": 37,
         "action": {
             "score": 1,
             "morale": 0,
@@ -13,7 +13,7 @@
     },
     {
         "text": "You disgust me, Rufus. Tell me more about your Fallen comrades. I'll give you a quick death.",
-        "dialogIndex": 39,
+        "dialogIndex": 38,
         "action": {
             "score": 0,
             "morale": 0,
@@ -24,7 +24,7 @@
     },
     {
         "text": "<Lie> The Devil's Nipple? I'm more of an IPA guy. Any other speakeasies I should check out?",
-        "dialogIndex": 40,
+        "dialogIndex": 39,
         "action": {
             "score": 3,
             "morale": 1,

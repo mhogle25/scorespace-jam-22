@@ -1,7 +1,7 @@
 [
     {
         "text": "What do you know about the inquisition?",
-        "dialogIndex": 29,
+        "dialogIndex": 28,
         "action": {
             "score": 1,
             "morale": 0,
@@ -13,7 +13,7 @@
     },
     {
         "text": "Yeah, you're being interviewed.",
-        "dialogIndex": 33,
+        "dialogIndex": 32,
         "action": {
             "score": 0,
             "morale": 0,
@@ -24,7 +24,7 @@
     },
     {
         "text": "<Lie> Fuck 'em. Pigs.",
-        "dialogIndex": 37,
+        "dialogIndex": 36,
         "action": {
             "score": 3,
             "morale": 1,
