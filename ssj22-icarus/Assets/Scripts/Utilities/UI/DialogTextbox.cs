@@ -28,6 +28,7 @@ namespace BF2D.UI {
         [Header("Private References")]
         //Serialized private variables
         [SerializeField] private TextMeshProUGUI textField = null;
+        [SerializeField] private Scrollbar scrollbar = null;
         [SerializeField] private RectTransform nametag = null;
         [SerializeField] private TextMeshProUGUI nametagTextField = null;
         [SerializeField] private Image continueIcon = null;
@@ -270,9 +271,22 @@ namespace BF2D.UI {
 
         public void Interrupt()
         {
-            while (this.interactable)
+            this.activeLines = null;
+            ResetControlVariables(0);
+            this.textField.text = string.Empty;
+            this.scrollbar.value = 1;
+            this.responseOptionsLayoutGroup.gameObject.SetActive(false);
+            UtilityFinalize();
+            //Reset the State
+            this.state = DialogQueueHandler;
+            //Call the callback function if it exists
+            this.callback?.Invoke();
+            this.callback = null;
+            //Call the EOD event
+            if (this.dialogQueue.Count < 1)
             {
-                Continue();
+                this.onEndOfQueuedDialogs?.Invoke();
+                return;
             }
         }
 
@@ -317,7 +331,8 @@ namespace BF2D.UI {
                 this.voiceAudioSource.clip = this.defaultVoice;
                 this.activeLines = dialogData.dialog;
                 this.callback = dialogData.callback;
-                this.textField.text = "";
+                this.textField.text = string.Empty;
+                this.scrollbar.value = 1;
 
                 //Debug.Log("[DialogTextbox] Dialog Loaded\n" + this.activeLines.Count + " lines");
 
@@ -345,7 +360,8 @@ namespace BF2D.UI {
                 this.pass = false;
                 BF2D.Utilities.Audio.PlayAudioSource(this.confirmAudioSource);       //Play the confirm sound
                 this.continueIcon.enabled = false;
-                this.textField.text = "";
+                this.textField.text = string.Empty;
+                this.scrollbar.value = 1;
                 if (this.nextDialogIndex != DialogTextbox.defaultValue)
                 {
                     this.dialogIndex = this.nextDialogIndex;
@@ -378,6 +394,7 @@ namespace BF2D.UI {
                 this.state = DialogQueueHandler;
                 //Set the dialog contents to the empty string
                 this.textField.text = string.Empty;
+                this.scrollbar.value = 1;
                 //Call the callback function if it exists
                 this.callback?.Invoke();
                 this.callback = null;
@@ -525,12 +542,13 @@ namespace BF2D.UI {
                 string currentMessage = this.textField.text;
                 currentMessage = currentMessage + message[this.messageIndex];
                 this.textField.text = currentMessage;
-
+                this.scrollbar.value = 0;
                 this.messageIndex++;                                                                    //Increment message index to move to next character
             }
 
             return true;
         }
+
 
         private string ParseTag(string message, ref int index) {
             //Move to tag

@@ -51,7 +51,7 @@ public class CourtRoomManager : MonoBehaviour
     private void Update()
     {
         state?.Invoke();
-        this.scoreDisplay.text = $"Score: {this.currentScore.score}";
+        this.scoreDisplay.text = $"Score: {this.currentScore.score}\nBribes: {this.currentScore.bribes}";
     }
 
     private void StateFadeIn()
@@ -90,6 +90,8 @@ public class CourtRoomManager : MonoBehaviour
     private IEnumerator Begin()
     {
         yield return new WaitForSeconds(5);
+        this.lever.Pull();
+        yield return new WaitForSeconds(2);
         dialogTextbox.Message("[N:Inquisitor][S:0.1]Have the next fallen enter.", () =>
         {
             StartNextFallen();
@@ -109,7 +111,7 @@ public class CourtRoomManager : MonoBehaviour
         fallen = Instantiate(fallen);
         fallen.transform.SetParent(this.background);
         fallen.transform.localScale = Vector3.one;
-        fallen.Begin(this, dialogTextbox, () =>
+        fallen.Begin(dialogTextbox, lever, () =>
         {
             PullLever(fallen);
         });

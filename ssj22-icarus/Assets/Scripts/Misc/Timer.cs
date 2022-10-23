@@ -29,6 +29,10 @@ public class Timer : MonoBehaviour
     private void Awake()
     {
         slider = GetComponent<Slider>();
+    }
+
+    private void OnEnable()
+    {
         slider.value = 1;
     }
 
