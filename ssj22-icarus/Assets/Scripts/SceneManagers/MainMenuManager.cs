@@ -7,8 +7,16 @@ public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Image overlay;
     [SerializeField] private float overlayFadeRate = 0.001f;
+    [SerializeField] private SpriteRenderer city = null;
+    [SerializeField] private float citySpeed = 0.2f;
+    [SerializeField] private int cityMoveThreshold = 10000;
     
     Action state;
+
+    private void Awake()
+    {
+        this.state += StateMoveCity;
+    }
 
     private void Update()
     {
@@ -23,7 +31,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        this.state = StateFadeOut;
+        this.state += StateFadeOut;
     }
 
     private void StateFadeOut()
@@ -38,6 +46,18 @@ public class MainMenuManager : MonoBehaviour
         }
 
         this.overlay.color += new Color(this.overlay.color.r, this.overlay.color.g, this.overlay.color.b, this.overlayFadeRate);
+    }
+
+    int timeAccumulator = 0;
+    private void StateMoveCity()
+    {
+        this.city.transform.localPosition += new Vector3(this.citySpeed * Time.deltaTime, 0, 0);
+        timeAccumulator++;
+        if (timeAccumulator > this.cityMoveThreshold)
+        {
+            timeAccumulator = 0;
+            this.citySpeed *= -1;
+        }
     }
 
     public void LoadHighScoresScene()
