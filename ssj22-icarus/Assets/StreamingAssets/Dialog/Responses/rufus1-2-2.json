@@ -1,9 +1,9 @@
 [
     {
-        "text": "Yeah it sounds great. Hey, have you been drinking? I was wondering where I could go and get one after work. Any recommendations?",
-        "dialogIndex": 15,
+        "text": "*Get up from your chair* Shut up you damnable drunk! What did Josiah and Vashti do?",
+        "dialogIndex": 20,
         "action": {
-            "score": 3,
+            "score": 0,
             "morale": 0,
             "bribe":0
 
@@ -12,8 +12,8 @@
         }
     },
     {
-        "text": "Must've been quite the party. Can you introduce me to some of your friends? They sound great.",
-        "dialogIndex": 19,
+        "text": "I don't know anything about Ishmael, but I'm curious about your other friends. Where do they usually hang out in their day-to-day?",
+        "dialogIndex": 21,
         "action": {
             "score": 3,
             "morale": 0,
@@ -23,11 +23,11 @@
         }
     },
     {
-        "text": "Wails? Could it be a ghost?",
-        "dialogIndex": 23,
+        "text": "<Lie> It'll be okay. Ishmael is doing fine, but he's been worried about you too. Why did you go to the restaurant? He kept talking about it.",
+        "dialogIndex": 22,
         "action": {
-            "score": 0,
-            "morale": 0,
+            "score": 3,
+            "morale": 1,
             "bribe":0
         },
         "prereq": {
