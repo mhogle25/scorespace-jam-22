@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 
 public class CourtRoomManager : MonoBehaviour
 {
@@ -30,6 +31,13 @@ public class CourtRoomManager : MonoBehaviour
         }
     }
     private Score currentScore = new();
+
+    struct ResponseAction
+    {
+        public int score;
+        public int morale;
+        public int bribe;
+    }
 
     Action state;
 
@@ -102,6 +110,13 @@ public class CourtRoomManager : MonoBehaviour
         {
             PullLever(fallen);
         });
+    }
+
+    public void UpdateScore(String actionItem) {
+        ResponseAction action = (ResponseAction)JsonConvert.DeserializeObject(actionItem);
+        currentScore.score += action.score;
+        currentScore.bribes += action.bribe;
+        currentScore.morale += action.morale;
     }
 
     private void PullLever(Fallen fallen)
