@@ -1,9 +1,9 @@
 [
     {
-        "text": "A psychic? I can tell your fortune right now. You're a damn fool.",
-        "dialogIndex": 24,
+        "text": "Whoa easy buddy no one is accusing you of anything. Why don't you tell me about yourself? What's your line of work?",
+        "dialogIndex": 1,
         "action": {
-            "score": 0,
+            "score": 1,
             "morale": 0,
             "bribe":0
 
@@ -12,8 +12,8 @@
         }
     },
     {
-        "text": "I don't think wails of joy is what those were at all.",
-        "dialogIndex": 25,
+        "text": "Cut the shit pal I know you switched out the spaghetti with worms",
+        "dialogIndex": 14,
         "action": {
             "score": 0,
             "morale": 0,
@@ -23,8 +23,8 @@
         }
     },
     {
-        "text": "Why did you go there in the first place?",
-        "dialogIndex": 26,
+        "text": "Where were you last night between the hours of 10pm and 1am?",
+        "dialogIndex": 27,
         "action": {
             "score": 3,
             "morale": 0,

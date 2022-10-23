@@ -1,10 +1,10 @@
 [
     {
-        "text": "I'm well aware. Have you seen your wings lately?",
-        "dialogIndex": 29,
+        "text": "<Lie> Oh yah all the time. Bosses amirite? Is your boss tough on you?",
+        "dialogIndex": 3,
         "action": {
-            "score": 0,
-            "morale": 0,
+            "score": 1,
+            "morale": 1,
             "bribe":0
 
         },
@@ -12,10 +12,10 @@
         }
     },
     {
-        "text": "Well, this has been productive. Goodbye Rufus.",
-        "dialogIndex": 30,
+        "text": "No, my boss is a great guy. Sounds like yours isn't?",
+        "dialogIndex": 4,
         "action": {
-            "score": 0,
+            "score": 1,
             "morale": 0,
             "bribe":0
         },
@@ -23,8 +23,8 @@
         }
     },
     {
-        "text": "You're not wrong. Sorry about this, Rufus.",
-        "dialogIndex": 31,
+        "text": "I would never disrespect my superiors!",
+        "dialogIndex": 5,
         "action": {
             "score": 0,
             "morale": 0,

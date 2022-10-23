@@ -1,10 +1,10 @@
 [
     {
-        "text": "I've never heard of any free restaurants in town. What's this place called?",
+        "text": "<Lie> Hey hey relax pal. I know I have a halo, but I have no love for inquisitors.",
         "dialogIndex": 2,
         "action": {
-            "score": 3,
-            "morale": 0,
+            "score": 1,
+            "morale": 1,
             "bribe":0
 
         },
@@ -12,10 +12,10 @@
         }
     },
     {
-        "text": "The Halo Factorium? Not a bad job. Have you been keeping up with the work? Any issues with the boss?",
+        "text": "Inquisitors are the most trustworthy people in this city! What are you talking about?",
         "dialogIndex": 6,
         "action": {
-            "score": 1,
+            "score": 0,
             "morale": 0,
             "bribe":0
         },
@@ -23,10 +23,10 @@
         }
     },
     {
-        "text": "*Salute him back* Glad to meet a true hero!",
+        "text": "I don't trust you much either Giuseppe. Tell me or I'll pull the lever NOW!",
         "dialogIndex": 10,
         "action": {
-            "score": 0,
+            "score": 1,
             "morale": 0,
             "bribe":0
         },

@@ -1,10 +1,10 @@
 [
     {
-        "text": "Where'd you get this food, Rufus?",
+        "text": "<Slap him>",
         "dialogIndex": 33,
         "action": {
-            "score": 1,
-            "morale": 0,
+            "score": 3,
+            "morale": 1,
             "bribe":0
 
         },
@@ -12,7 +12,7 @@
         }
     },
     {
-        "text": "I don't want your scraps, drunkard. Tell me about the restaurant or I pull the lever.",
+        "text": "So you work at the same factory that was attacked. That's suspicious",
         "dialogIndex": 34,
         "action": {
             "score": 1,
@@ -23,12 +23,12 @@
         }
     },
     {
-        "text": "<Take Bribe> Okay, Rufus. I'll bite. He's in the back, actually, slotted for today's interviews.",
+        "text": "Why aren't you as concerned as everyone else who works at the factory Giuseppe? You seem like you don't care.",
         "dialogIndex": 35,
         "action": {
-            "score": 0,
-            "morale": 1,
-            "bribe":1
+            "score": 1,
+            "morale": 0,
+            "bribe":0
         },
         "prereq": {
         }

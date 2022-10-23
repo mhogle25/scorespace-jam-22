@@ -1,10 +1,10 @@
 [
     {
-        "text": "A psychic? I can tell your fortune right now. You're a damn fool.",
-        "dialogIndex": 24,
+        "text": "<Lie> You're still lying Giuseppe. Last chance or I pull the lever",
+        "dialogIndex": 37,
         "action": {
             "score": 0,
-            "morale": 0,
+            "morale": 1,
             "bribe":0
 
         },
@@ -12,8 +12,8 @@
         }
     },
     {
-        "text": "I don't think wails of joy is what those were at all.",
-        "dialogIndex": 25,
+        "text": "DON'T LIE TO ME YOU BITCH! TELL ME OR I PULL THE LEVER RIGHT NOW!",
+        "dialogIndex": 38,
         "action": {
             "score": 0,
             "morale": 0,
@@ -23,8 +23,8 @@
         }
     },
     {
-        "text": "Why did you go there in the first place?",
-        "dialogIndex": 26,
+        "text": "...",
+        "dialogIndex": 39,
         "action": {
             "score": 3,
             "morale": 0,
