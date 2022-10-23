@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Just tell me why Giuseppe. Why would you do that?",
+        "dialogIndex": 16,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "How did you get in? The doors were locked.",
+        "dialogIndex": 17,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "What did you hope to gain from this senseless violence Giuseppe?",
+        "dialogIndex": 18,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

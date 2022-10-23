@@ -1,0 +1,37 @@
+[
+    {
+        "text": "<Lie> Hey hey relax pal. I know I have a halo, but I have no love for inquisitors.",
+        "dialogIndex": 2,
+        "action": {
+            "score": 1,
+            "morale": 1,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Inquisitors are the most trustworthy people in this city! What are you talking about?",
+        "dialogIndex": 6,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "I don't trust you much either Giuseppe. Tell me or I'll pull the lever NOW!",
+        "dialogIndex": 10,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]
