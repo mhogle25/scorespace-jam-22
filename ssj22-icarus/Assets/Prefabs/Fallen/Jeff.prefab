@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8555457058165799007}
   - component: {fileID: 8555457058165799000}
   m_Layer: 0
-  m_Name: Rufus
+  m_Name: Jeff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,8 +87,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 589bb2b8f396c864f9a4b57042fa9f65, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 8f2998a08530dfa4ca1fb88f7c403959, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

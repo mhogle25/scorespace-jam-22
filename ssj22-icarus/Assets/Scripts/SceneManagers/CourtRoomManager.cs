@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
+using TMPro;
 
 public class CourtRoomManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class CourtRoomManager : MonoBehaviour
     [SerializeField] private BF2D.UI.DialogTextbox dialogTextbox;
     [SerializeField] private Transform background = null;
     [SerializeField] private Lever lever = null;
+    [SerializeField] private TextMeshProUGUI scoreDisplay = null;
     [Header("Misc")]
     [SerializeField] private Image overlay = null;
     [SerializeField] private float overlayFadeRate = 0.001f;
@@ -49,6 +51,7 @@ public class CourtRoomManager : MonoBehaviour
     private void Update()
     {
         state?.Invoke();
+        this.scoreDisplay.text = $"Score: {this.currentScore.score}";
     }
 
     private void StateFadeIn()
@@ -112,11 +115,19 @@ public class CourtRoomManager : MonoBehaviour
         });
     }
 
-    public void UpdateScore(String actionItem) {
-        ResponseAction action = (ResponseAction)JsonConvert.DeserializeObject(actionItem);
+    public void UpdateScore(string actionItem) {
+        ResponseAction action = JsonConvert.DeserializeObject<ResponseAction>(actionItem);
         currentScore.score += action.score;
         currentScore.bribes += action.bribe;
         currentScore.morale += action.morale;
+    }
+
+    public void UpdateScore(int value)
+    {
+        if (currentScore.score < 1 && value < 0)
+            return;
+
+        currentScore.score += value;
     }
 
     private void PullLever(Fallen fallen)
