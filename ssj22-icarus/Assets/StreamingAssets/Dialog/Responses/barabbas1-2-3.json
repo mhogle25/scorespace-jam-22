@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Oddly forthcoming for someone who says he's ashamed.",
+        "dialogIndex": 24,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Usually someone going alone would just buy a bottle instead.",
+        "dialogIndex": 25,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Enough of these lies!Stop playing the good samaritan and give me names!",
+        "dialogIndex": 26,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

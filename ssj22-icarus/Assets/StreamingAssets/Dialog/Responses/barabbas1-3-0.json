@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Don't give me your money. All I want is for you to cooperate. So talk.",
+        "dialogIndex": 28,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Punch him> You think you can bribe an Inquisitor? You make me sick. What is it, huh? Fraud? Theft?",
+        "dialogIndex": 32,
+        "action": {
+            "score": 3,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Accept Bribe> Fine. I'll play it nice, but you better help too. Why are you in here? I know you know.",
+        "dialogIndex": 36,
+        "action": {
+            "score": 0,
+            "morale": 1,
+            "bribe":1
+        },
+        "prereq": {
+        }
+    }
+    
+]

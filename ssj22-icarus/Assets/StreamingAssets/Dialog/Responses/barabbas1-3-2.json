@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Is that a confession?",
+        "dialogIndex": 33,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "With those puny arms? A businessman couldn't get his hands dirty.",
+        "dialogIndex": 34,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Punch him> You think that's gonna scare me? People like you need to be taught a lesson. Stay in line. I'll enjoy watching you fall.",
+        "dialogIndex": 35,
+        "action": {
+            "score": 0,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]
