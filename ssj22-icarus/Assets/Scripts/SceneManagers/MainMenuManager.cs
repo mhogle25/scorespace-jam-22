@@ -1,8 +1,20 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [SerializeField] private Image overlay;
+    [SerializeField] private float overlayFadeRate = 0.001f;
+    
+    Action state;
+
+    private void Update()
+    {
+        this.state?.Invoke();
+    }
+
     public void QuitGame()
     {
         GlobalManager.Instance.SaveGame();
@@ -11,6 +23,25 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Court Room");
+        this.state = StateFadeOut;
+    }
+
+    private void StateFadeOut()
+    {
+        if (!this.overlay.gameObject.activeSelf) this.overlay.gameObject.SetActive(true);
+
+        if (this.overlay.color.a > 1f - this.overlayFadeRate)
+        {
+            this.state = null;
+            SceneManager.LoadScene("Court Room");
+            return;
+        }
+
+        this.overlay.color += new Color(this.overlay.color.r, this.overlay.color.g, this.overlay.color.b, this.overlayFadeRate);
+    }
+
+    public void LoadHighScoresScene()
+    {
+        SceneManager.LoadScene("High Scores");
     }
 }

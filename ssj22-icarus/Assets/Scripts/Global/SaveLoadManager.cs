@@ -34,9 +34,9 @@ public class SaveLoadManager
         {
             get
             {
-                this.Scores.Sort((x, y) =>
+                this.scores.Sort((x, y) =>
                 {
-                    return x.score.CompareTo(y.score);
+                    return y.score.CompareTo(x.score);
                 });
 
                 return scores;
