@@ -6,7 +6,7 @@ using UnityEngine;
 public class Fallen : MonoBehaviour
 {
     [SerializeField] private string dialogFileName = string.Empty;
-    [SerializeField] private SpriteRenderer spriteRenderer = null;
+    [SerializeField] private float speed = 8f;
 
     //private CourtRoomManager courtRoomManager = null;
     private BF2D.UI.DialogTextbox dialogTextbox = null;
@@ -24,6 +24,7 @@ public class Fallen : MonoBehaviour
         this.dialogTextbox = dialogTextbox;
         this.callback = callback;
 
+        this.transform.localPosition = Vector3.zero;
         this.transform.localPosition -= new Vector3(8f, 0f, 0f);
         this.state = StateEnter;
     }
@@ -36,7 +37,7 @@ public class Fallen : MonoBehaviour
 
     private void StateFalling()
     {
-        this.transform.localPosition -= new Vector3(0f, 0.1f, 0f);
+        this.transform.localPosition -= new Vector3(0f, this.speed * Time.deltaTime, 0f);
 
         if (this.transform.localPosition.y < -4)
         {
@@ -48,7 +49,7 @@ public class Fallen : MonoBehaviour
     {
         if (this.transform.localPosition.x < 0)
         {
-            this.transform.localPosition += new Vector3(0.1f, 0f, 0f);
+            this.transform.localPosition += new Vector3(this.speed * Time.deltaTime, 0f, 0f);
             return;
         }
 
@@ -62,6 +63,7 @@ public class Fallen : MonoBehaviour
         {
             FinalizeFallen();
         });
+        this.dialogTextbox.UtilityInitialize();
     }
 
     private void FinalizeFallen()

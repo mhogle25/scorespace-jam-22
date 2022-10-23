@@ -376,6 +376,8 @@ namespace BF2D.UI {
                 NametagDisable();
                 //Reset the State
                 this.state = DialogQueueHandler;
+                //Set the dialog contents to the empty string
+                this.textField.text = string.Empty;
                 //Call the callback function if it exists
                 this.callback?.Invoke();
                 this.callback = null;
@@ -385,6 +387,7 @@ namespace BF2D.UI {
                     this.onEndOfQueuedDialogs?.Invoke();
                     return;
                 }
+
             }
         }
         #endregion
