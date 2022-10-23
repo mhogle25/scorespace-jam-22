@@ -1,7 +1,7 @@
 [
     {
         "text": "Right. And how did you happen to enter this restaurant? I assume you didn't put yourself down on the waitlist?",
-        "dialogIndex": 4,
+        "dialogIndex": 3,
         "action": {
             "score": 3,
             "morale": 0,
@@ -13,7 +13,7 @@
     },
     {
         "text": "Maybe I'll come with you then. But did you end up hurting anyone when you went to eat? I feel like people at this restaurant might get a bit upset with you being there.",
-        "dialogIndex": 5,
+        "dialogIndex": 4,
         "action": {
             "score": 1,
             "morale": 0,
@@ -24,10 +24,10 @@
     },
     {
         "text": "<Punch him> What were you thinking you drunkard? You stole food from a hospital!",
-        "dialogIndex": 6,
+        "dialogIndex": 5,
         "action": {
             "score": 0,
-            "morale": 0,
+            "morale": 1,
             "bribe":0
         },
         "prereq": {
