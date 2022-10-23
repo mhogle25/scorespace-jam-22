@@ -1007,7 +1007,6 @@ MonoBehaviour:
   city: {fileID: 2104594371}
   citySpeed: 0.2
   cityMoveThreshold: 10000
-  timeAccumulator: 0
 --- !u!4 &1550070206
 Transform:
   m_ObjectHideFlags: 0
@@ -1972,7 +1971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

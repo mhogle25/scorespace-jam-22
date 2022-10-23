@@ -14,12 +14,16 @@ public class CourtRoomManager : MonoBehaviour
     [Header("Fallen")]
     [SerializeField] private Fallen initFallenPrefab = null;
     [SerializeField] private List<Fallen> fallenPrefabs = new();
-    [Header("Scene References")]
+    [Header("Graphic References")]
     [SerializeField] private BF2D.UI.DialogTextbox dialogTextbox;
     [SerializeField] private Transform background = null;
     [SerializeField] private Lever lever = null;
     [SerializeField] private TextMeshProUGUI scoreDisplay = null;
     [SerializeField] private DisplayOverlay displayOverlay = null;
+    [Header("Audio")]
+    [SerializeField] private AudioSource musicSource = null;
+    [SerializeField] private AudioClip song1 = null;
+    [SerializeField] private AudioClip song2 = null;
     [Header("Misc")]
     [SerializeField] private Image overlay = null;
     [SerializeField] private float overlayFadeRate = 0.001f;
@@ -82,7 +86,8 @@ public class CourtRoomManager : MonoBehaviour
             {
                 this.fallenQueue.Enqueue(f);
             }
-
+            this.musicSource.clip = this.song1;
+            this.musicSource.Play();
             StartNextFallen();
         });
         dialogTextbox.UtilityInitialize();
