@@ -12,7 +12,7 @@
         }
     },
     {
-        "text": "Maybe I'll come with you then. But did you end up hurting anyone when you went to eat? I feel like people at this restaurant might get a bit upset with you being there.",
+        "text": "Maybe I'll come with you. But did you hurt anyone there? People at this restaurant might have been upset.",
         "dialogIndex": 4,
         "action": {
             "score": 1,

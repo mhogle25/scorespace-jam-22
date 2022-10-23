@@ -1,10 +1,10 @@
 [
     {
-        "text": "Yeah it sounds great. Hey, have you been drinking? I was wondering where I could go and get one after work. Any recommendations?",
+        "text": "<Lie> Yeah, sounds great. Hey, have you been drinking? Where could I get one after work?",
         "dialogIndex": 15,
         "action": {
             "score": 3,
-            "morale": 0,
+            "morale": 1,
             "bribe":0
 
         },
