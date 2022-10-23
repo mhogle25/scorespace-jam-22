@@ -1,7 +1,7 @@
 [
     {
         "text": "Don't you think you should be working? The people of the Inquisition need those halos and it helps everyone!",
-        "dialogIndex": 8,
+        "dialogIndex": 7,
         "action": {
             "score": 0,
             "morale": 0,
@@ -13,7 +13,7 @@
     },
     {
         "text": "Look you're just a worker. I get it. And you're sure your boss hasn't been overworking you?",
-        "dialogIndex": 9,
+        "dialogIndex": 8,
         "action": {
             "score": 3,
             "morale": 0,
@@ -24,7 +24,7 @@
     },
     {
         "text": "What's that about the Inquisition? Don't like them?",
-        "dialogIndex": 10,
+        "dialogIndex": 9,
         "action": {
             "score": 0,
             "morale": 0,

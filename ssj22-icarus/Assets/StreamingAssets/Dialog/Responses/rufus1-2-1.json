@@ -1,7 +1,7 @@
 [
     {
         "text": "Shut up you damnable drunk! What did Josiah and Vashti do?",
-        "dialogIndex": 21,
+        "dialogIndex": 20,
         "action": {
             "score": 0,
             "morale": 0,
@@ -13,7 +13,7 @@
     },
     {
         "text": "I don't know anything about Ishmael, but I'm curious about your other friends. Where do they usually hang out in their day-to-day?",
-        "dialogIndex": 22,
+        "dialogIndex": 21,
         "action": {
             "score": 3,
             "morale": 0,
@@ -24,7 +24,7 @@
     },
     {
         "text": "<Lie> It'll be okay. Ishmael is doing fine, but he's been worried about you too. Why did you go to the restaurant? He kept talking about it.",
-        "dialogIndex": 23,
+        "dialogIndex": 22,
         "action": {
             "score": 3,
             "morale": 1,
