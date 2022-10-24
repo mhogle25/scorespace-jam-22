@@ -14,17 +14,23 @@ public class CourtRoomManager : MonoBehaviour
     [Header("Fallen")]
     [SerializeField] private Fallen initFallenPrefab = null;
     [SerializeField] private List<Fallen> fallenPrefabs = new();
-    [Header("Scene References")]
+    [Header("Graphic References")]
     [SerializeField] private BF2D.UI.DialogTextbox dialogTextbox;
     [SerializeField] private Transform background = null;
     [SerializeField] private Lever lever = null;
     [SerializeField] private TextMeshProUGUI scoreDisplay = null;
     [SerializeField] private DisplayOverlay displayOverlay = null;
+    [Header("Audio")]
+    [SerializeField] private AudioSource musicSource = null;
+    [SerializeField] private AudioClip song1 = null;
+    [SerializeField] private AudioClip song2 = null;
     [Header("Misc")]
     [SerializeField] private Image overlay = null;
     [SerializeField] private float overlayFadeRate = 0.001f;
+    [SerializeField] private int amountToQueue = 5;
 
     private Queue<Fallen> fallenQueue = new();
+    private Stack<Fallen> fallenBin = new();
 
     public Score GetScore
     {
@@ -73,16 +79,16 @@ public class CourtRoomManager : MonoBehaviour
     private IEnumerator InitBegin()
     {
         yield return new WaitForSeconds(3);
-        dialogTextbox.Message("[N:Inquisitor][S:0.1]Have the first fallen enter.", () =>
+        dialogTextbox.Message("[V:medium][N:Inquisitor][S:0.1]Have the first fallen enter.", () =>
         {
             this.fallenQueue.Enqueue(this.initFallenPrefab);
             System.Random rand = new System.Random();
             List<Fallen> shuffled = this.fallenPrefabs.OrderBy(_ => rand.Next()).ToList();
-            foreach (Fallen f in shuffled)
+            for (int i = 0; i < this.amountToQueue; i++)
             {
-                this.fallenQueue.Enqueue(f);
+                this.fallenQueue.Enqueue(shuffled[i]);
             }
-
+            this.musicSource.clip = this.song1;
             StartNextFallen();
         });
         dialogTextbox.UtilityInitialize();
@@ -99,7 +105,14 @@ public class CourtRoomManager : MonoBehaviour
         yield return new WaitForSeconds(5);
         this.lever.Pull();
         yield return new WaitForSeconds(2);
-        dialogTextbox.Message("[N:Inquisitor][S:0.1]Have the next fallen enter.", () =>
+
+        if (this.fallenQueue.Count < 1)
+        {
+            BeginGodEncounter();
+            yield break;
+        }
+
+        dialogTextbox.Message("[V:medium][N:Inquisitor][S:0.1]Have the next fallen enter.", () =>
         {
             StartNextFallen();
         });
@@ -113,23 +126,19 @@ public class CourtRoomManager : MonoBehaviour
 
     private void StartNextFallen()
     {
-        if (this.fallenQueue.Count < 1)
-        {
-            BeginGodEncounter();
-            return;
-        }
-
         Fallen fallen = this.fallenQueue.Dequeue();
         fallen = Instantiate(fallen);
+        this.fallenBin.Push(fallen);
         fallen.transform.SetParent(this.background);
         fallen.transform.localScale = Vector3.one;
+        this.musicSource.Play();
         fallen.onDeath.AddListener(() =>
         {
             Continue();
         });
         fallen.Begin(dialogTextbox, lever, () =>
         {
-            PullLever(fallen);
+            PullLever();
         });
     }
 
@@ -148,15 +157,19 @@ public class CourtRoomManager : MonoBehaviour
         currentScore.score += value;
     }
 
-    private void PullLever(Fallen fallen)
+    private void PullLever()
     {
         this.lever.Pull();
-        fallen.Fall();
+        this.musicSource.Pause();
+        this.fallenBin.Peek().Fall();
     }
 
     private void BeginGodEncounter()
     {
-
+        this.musicSource.Stop();
+        this.musicSource.clip = song2;
+        this.musicSource.Play();
+        Debug.Log("GOD ACTIVATE");
     }
 
     private void FinalizeGame()

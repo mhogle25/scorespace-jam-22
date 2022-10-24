@@ -10,6 +10,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private SpriteRenderer city = null;
     [SerializeField] private float citySpeed = 0.2f;
     [SerializeField] private int cityMoveThreshold = 10000;
+    [SerializeField] private AudioSource music = null;
     
     Action state;
 
@@ -46,6 +47,8 @@ public class MainMenuManager : MonoBehaviour
         }
 
         this.overlay.color += new Color(this.overlay.color.r, this.overlay.color.g, this.overlay.color.b, this.overlayFadeRate);
+
+        this.music.volume -= this.overlayFadeRate;
     }
 
     int timeAccumulator = 0;

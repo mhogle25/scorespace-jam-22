@@ -1,4 +1,4 @@
-[N:Barabbas]Now hello there. [P:0.5] My name is Barabbas Sutton, [P:0.5] owner of Ecclesiarch Foods. [P:0.5] Is something the matter? [P:0.5] If there's any way I can help just let me know. [P:0.5][R:barabbas1-0-0]
+[V:medium-high][N:Barabbas Sutton]Now hello there. [P:0.5] My name is Barabbas Sutton, [P:0.5] owner of Ecclesiarch Foods. [P:0.5] Is something the matter? [P:0.5] If there's any way I can help just let me know. [P:0.5][R:barabbas1-0-0]
 Not that I can think of, [P:0.5] Inquisitor. [P:0.5] I mean there are occasionally workers that are discontent, [P:0.5] but I pride myself in creating a good workplace. [P:0.5][R:barabbas1-1-0]
 There are some, [P:0.5] yes. [P:0.5] I would say there are the folks at Divinity Farms that don't like Ecclesiarch foods, [P:0.5] but that's just friendly competition. [P:0.5][R:barabbas1-1-1]
 Yes, [P:0.5] friendly competition. [P:0.5] And I'm right! [P:0.5] He owns a major set of farms, [P:0.5] as do I. [P:0.5] There is tension of course, [P:0.5] but we keep it strictly professional. [P:0.5] Now is that all, [P:0.5] Inquisitor? [P:0.5][E]

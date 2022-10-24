@@ -1,0 +1,35 @@
+[
+	{
+		"text": "SHUT THE FUCK UP AND TELL ME WHY YOU DID IT! I KNOW YOU KILLED HIM!",
+		"dialogIndex": 28,
+		"action": {
+			"score": 0,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "...",
+		"dialogIndex": 32,
+		"action": {
+			"score": 1,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "Just tell me where the body is Kassandra. This can all be over.",
+		"dialogIndex": 36,
+		"action": {
+			"score": 1,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	}
+]

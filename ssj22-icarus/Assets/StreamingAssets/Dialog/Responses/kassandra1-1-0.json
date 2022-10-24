@@ -1,0 +1,35 @@
+[
+	{
+		"text": "Any spat in particular that stood out to you?",
+		"dialogIndex": 2,
+		"action": {
+			"score": 1,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "<lie> Ha ha. Don't I know it? The wife and I are always getting into it. I'm working all day! I don't deserve that.",
+		"dialogIndex": 6,
+		"action": {
+			"score": 0,
+			"morale": 1,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "Were they regular to him, too? Maybe he took it harder than you and had to get away?",
+		"dialogIndex": 10,
+		"action": {
+			"score": 3,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	}
+]

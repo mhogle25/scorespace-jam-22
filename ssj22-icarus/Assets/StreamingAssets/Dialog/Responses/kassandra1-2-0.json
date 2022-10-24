@@ -1,0 +1,35 @@
+[
+	{
+		"text": "\"Could have been\"? You don't seem to know your husband very well, Mrs. Bolt.",
+		"dialogIndex": 15,
+		"action": {
+			"score": 0,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "\"Working late\"? Define late.",
+		"dialogIndex": 19,
+		"action": {
+			"score": 3,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "Did you have anything to do with the disappearance, Kassandra?",
+		"dialogIndex": 23,
+		"action": {
+			"score": 1,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	}
+]
