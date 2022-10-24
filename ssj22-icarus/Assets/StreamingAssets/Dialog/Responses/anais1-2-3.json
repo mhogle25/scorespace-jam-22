@@ -1,7 +1,7 @@
 [
     {
-        "text": "Where do you go for privacy, Jebediah Jameson?",
-        "dialogIndex": 7,
+        "text": "Alright, fine Fontaine. Here you go. You smell anything else lately?",
+        "dialogIndex": 24,
         "action": {
             "score": 1,
             "morale": 0,
@@ -12,8 +12,8 @@
         }
     },
     {
-        "text": "Fine, Jay. Have it your way.",
-        "dialogIndex": 8,
+        "text": "No Fontaine, I'm sick of your shit. You're stiffing the wrong side, here.",
+        "dialogIndex": 25,
         "action": {
             "score": 0,
             "morale": 0,
@@ -23,10 +23,10 @@
         }
     },
     {
-        "text": "<Lie> You should know then, that we have extra-prying eyes. We know, Jay. You just need to come clean.",
-        "dialogIndex": 9,
+        "text": "<Lie> You still have a chance, Detective. Work with me and I'll get you out.",
+        "dialogIndex": 26,
         "action": {
-            "score": 1,
+            "score": 0,
             "morale": 1,
             "bribe":0
         },

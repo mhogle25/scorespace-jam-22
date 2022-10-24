@@ -1,9 +1,9 @@
 [
     {
-        "text": "Where do you go for privacy, Jebediah Jameson?",
-        "dialogIndex": 7,
+        "text": "*Sure, Fontaine. Here's one for the road. What do you have for me?",
+        "dialogIndex": 15,
         "action": {
-            "score": 1,
+            "score": 3,
             "morale": 0,
             "bribe":0
 
@@ -12,8 +12,8 @@
         }
     },
     {
-        "text": "Fine, Jay. Have it your way.",
-        "dialogIndex": 8,
+        "text": "You're not getting shit until you talk, Fontaine. What'd you do to get those wings of yours?",
+        "dialogIndex": 19,
         "action": {
             "score": 0,
             "morale": 0,
@@ -23,10 +23,10 @@
         }
     },
     {
-        "text": "<Lie> You should know then, that we have extra-prying eyes. We know, Jay. You just need to come clean.",
-        "dialogIndex": 9,
+        "text": "<Lie> We don't have any coffee, Fontaine. Focus.",
+        "dialogIndex": 23,
         "action": {
-            "score": 1,
+            "score": 0,
             "morale": 1,
             "bribe":0
         },
