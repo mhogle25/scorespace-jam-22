@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Intimacy with another man? That goes against God's will.",
+        "dialogIndex": 24,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "The real problem is that you're receiving money for this.",
+        "dialogIndex": 25,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "I think what you're doing is good, but the rules are clear. Sorry, Gabriel.",
+        "dialogIndex": 26,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

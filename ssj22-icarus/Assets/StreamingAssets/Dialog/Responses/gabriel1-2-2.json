@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Think back to that time. Anything strange happen?",
+        "dialogIndex": 20,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Well I understand you don't want to confess. That's fine. Enjoy the fall.",
+        "dialogIndex": 21,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Lie> Oh so you're connected to that murder case I heard about 6 months back!",
+        "dialogIndex": 22,
+        "action": {
+            "score": 0,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

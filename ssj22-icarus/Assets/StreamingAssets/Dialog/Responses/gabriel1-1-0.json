@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Only dinner and chatting?",
+        "dialogIndex": 2,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "What do you mean 'usually civil'?",
+        "dialogIndex": 6,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "And why are your wings black if all you do is talk with people and go out for drinks? Stop lying!",
+        "dialogIndex": 10,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]
