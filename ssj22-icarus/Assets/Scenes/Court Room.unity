@@ -265,7 +265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: "Quit \n(Progress will not be saved)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a9414c80bf05cb749a60714c9ba9a63f, type: 2}
   m_sharedMaterial: {fileID: 5494906580358676605, guid: a9414c80bf05cb749a60714c9ba9a63f, type: 2}
@@ -3407,7 +3407,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Resume
 
-    (Game is NOT paused)'
+    (Game is not paused)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a9414c80bf05cb749a60714c9ba9a63f, type: 2}
   m_sharedMaterial: {fileID: 5494906580358676605, guid: a9414c80bf05cb749a60714c9ba9a63f, type: 2}

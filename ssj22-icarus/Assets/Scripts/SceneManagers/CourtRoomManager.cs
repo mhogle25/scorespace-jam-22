@@ -82,7 +82,7 @@ public class CourtRoomManager : MonoBehaviour
 
         if (this.overlay.color.a > 1 - this.overlayFadeRate)
         {
-            SceneManager.LoadScene("End Scene");
+            SceneManager.LoadScene("End");
         }
 
         this.overlay.color += new Color(this.overlay.color.r, this.overlay.color.g, this.overlay.color.b, this.overlayFadeRate);

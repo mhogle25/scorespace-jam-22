@@ -15,9 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/High Scores.unity
     guid: 5b73bfa0304516b4ca7b9d67a1b7230c
   - enabled: 1
-    path: Assets/Scenes/End Scene.unity
+    path: Assets/Scenes/End.unity
     guid: da410015048013d47bc261d66eb363e2
   - enabled: 1
-    path: Assets/Scenes/Enter Name Scene.unity
+    path: Assets/Scenes/Enter Name.unity
     guid: 13e2f8607cad9df41933758116da54f2
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 16250d8feeea862478c26f581337215c
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 719b260d5a40dde44b23a873cf65979a
   m_configObjects: {}

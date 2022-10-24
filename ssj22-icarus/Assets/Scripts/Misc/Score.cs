@@ -1,3 +1,4 @@
+[System.Serializable]
 public class Score
 {
     public string name = string.Empty;

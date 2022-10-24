@@ -67,4 +67,14 @@ public class MainMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("High Scores");
     }
+
+    public void LoadTutorialScene()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void LoadCreditsScene()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }

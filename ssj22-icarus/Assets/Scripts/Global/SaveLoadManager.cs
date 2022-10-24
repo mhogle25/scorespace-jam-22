@@ -10,6 +10,7 @@ public class SaveLoadManager
     [Serializable]
     private class SaveData
     {
+        [JsonProperty] private bool firstTime = true;
         [JsonProperty] private readonly List<Score> scores = new();
 
         [JsonIgnore]
@@ -26,6 +27,20 @@ public class SaveLoadManager
                     if (score.score > max.score) max = score;
                 }
                 return max;
+            }
+        }
+
+        [JsonIgnore] 
+        public bool FirstTime
+        {
+            get
+            {
+                return this.firstTime;
+            }
+
+            set
+            {
+                this.firstTime = value;
             }
         }
 
