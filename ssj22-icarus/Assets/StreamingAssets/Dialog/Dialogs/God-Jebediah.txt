@@ -1,3 +1,3 @@
-The CEO of the Congregation, Jebediah J. Jameson, how did he betray our teachings? [R:god-jebediah-1] [E]
+[N:God][V:god][S:0.1]The CEO of the Congregation, Jebediah J. Jameson, how did he betray our teachings? [R:god-jebediah-1]
 Your work pleases me. The journalist will be quelled. [E]
 Hmm, something is not right here. We will have to revisit this. [E]

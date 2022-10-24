@@ -6,6 +6,13 @@ using UnityEngine.Events;
 
 public class Fallen : MonoBehaviour
 {
+    public string DialogFileName
+    {
+        get
+        {
+            return this.dialogFileName;
+        }
+    }
     [SerializeField] private string dialogFileName = string.Empty;
     [SerializeField] private float speed = 8f;
 
@@ -15,6 +22,7 @@ public class Fallen : MonoBehaviour
     private Action callback = null;
 
     private Action state;
+
     private void Update()
     {
         this.state?.Invoke();    

@@ -538,11 +538,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 74745290}
   dialogTextbox: {fileID: 1492842867}
+  timer: {fileID: 360137248}
   musicSource: {fileID: 1066859610}
   sfxSource: {fileID: 74745291}
   song: {fileID: 8300000, guid: 664eddbb862f5c34489d373883995f88, type: 3}
-  fadeRate: 0.5
-  voiceKey: low
+  spriteFadeRate: 0.5
+  voiceKey: god
+  timerDefaultSpeed: 0.1
+  bribeFactor: 0.5
 --- !u!1 &109597430
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,16 +2635,17 @@ MonoBehaviour:
   - {fileID: 8555457058165799007, guid: a9496024d976c8741a09b682ce953436, type: 3}
   - {fileID: 8555457058165799007, guid: 952cebddf5f8170419f71038351756fc, type: 3}
   - {fileID: 8555457058165799007, guid: 9429f981149caff4ca3be50eaf89177d, type: 3}
+  - {fileID: 8555457058165799007, guid: e86a8455778cf174e90c9d0df3098c82, type: 3}
   dialogTextbox: {fileID: 1492842867}
   background: {fileID: 475916552}
   lever: {fileID: 1660943746}
   scoreDisplay: {fileID: 699538689}
   displayOverlay: {fileID: 1964468232}
   musicSource: {fileID: 1066859610}
-  song: {fileID: 0}
+  song: {fileID: 8300000, guid: 264bab8c89349644c9af624e0966761c, type: 3}
   overlay: {fileID: 779517587}
   overlayFadeRate: 0.001
-  amountToQueue: 0
+  amountToQueue: 4
 --- !u!4 &1066859609
 Transform:
   m_ObjectHideFlags: 0
@@ -3026,6 +3030,7 @@ MonoBehaviour:
   DefaultMessageSpeed: 0.05
   MessageInterrupt: 1
   AutoPass: 0
+  VoiceMuted: 0
   onEndOfQueuedDialogs:
     m_PersistentCalls:
       m_Calls:
@@ -3111,6 +3116,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e74eb7862aca179428af152ed48507b3, type: 3}
   - {fileID: 8300000, guid: 4ea972ec59b11a141ac1e597060d6a4f, type: 3}
   - {fileID: 8300000, guid: 5deb37aa45ab1b644a45aa430dcf787f, type: 3}
+  - {fileID: 8300000, guid: ac1a89432d5942e408a9ee38c288c2f4, type: 3}
 --- !u!222 &1492842869
 CanvasRenderer:
   m_ObjectHideFlags: 0

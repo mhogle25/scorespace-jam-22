@@ -17,6 +17,7 @@ public class Lever : MonoBehaviour
     public void Pull()
     {
         audioSource.Play();
+        this.interactive = false;
         unpulled = !unpulled;
         spriteRenderer.sprite = unpulled ? up : down;
     }
@@ -32,7 +33,7 @@ public class Lever : MonoBehaviour
 
     void OnMouseOver()
     {
-        this.leverHighlight.gameObject.SetActive(unpulled);
+        this.leverHighlight.gameObject.SetActive(unpulled && interactive);
     }
 
     void OnMouseExit()

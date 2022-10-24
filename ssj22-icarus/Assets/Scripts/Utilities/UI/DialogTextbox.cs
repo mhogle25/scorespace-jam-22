@@ -339,7 +339,6 @@ namespace BF2D.UI {
                 this.scrollbar.value = 1;
 
                 //Debug.Log("[DialogTextbox] Dialog Loaded\n" + this.activeLines.Count + " lines");
-
                 this.state = MessageParseAndDisplayClocked;
             }
         }

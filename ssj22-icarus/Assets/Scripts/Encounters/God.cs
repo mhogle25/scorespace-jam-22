@@ -18,7 +18,7 @@ public class God : MonoBehaviour
     [SerializeField] private AudioClip song = null;
     [Header("Misc")]
     [SerializeField] private float spriteFadeRate = 0.5f;
-    [SerializeField] private string voiceKey = "low";
+    [SerializeField] private string voiceKey = "god";
     [SerializeField] private float timerDefaultSpeed = 0.1f;
     [SerializeField] private float bribeFactor = 0.5f;
 
@@ -75,14 +75,22 @@ public class God : MonoBehaviour
 
         this.dialogTextbox.Dialog(new List<string>
         {
-            $"[N:Our God][V:{this.voiceKey}][S:0.1]Bring to me what you have gathered",
-            "I hope I am not dissapointed"
+            $"[N:God][V:{this.voiceKey}][S:0.1]Bring to me what you have gathered",
+            "I hope I am not dissapointed[E]"
         },
-        0
+        0,
+        () =>
+        {
+            this.dialogTextbox.VoiceMuted = true;
+        }
         );
 
-        this.dialogTextbox.VoiceMuted = true;
-        this.dialogTextbox.Message($"[N:-1] (Since you took {this.currentScore.bribes} bribes, your timer will increase)");
+        string plural = this.currentScore.bribes == 1 ? "" : "s";
+        string message = this.currentScore.bribes < 1 ? "[N:-1][V:-1][S:-1](The response timer is faster now)" : $"(Since you took {this.currentScore.bribes} bribe{plural}, the response timer will be slower than usual)";
+        this.dialogTextbox.Message(message, () =>
+        {
+            this.dialogTextbox.VoiceMuted = false;
+        });
         for (int i = 0; i < this.currentScore.bribes; i++)
         {
             this.timer.Speed += this.bribeFactor;
@@ -91,7 +99,7 @@ public class God : MonoBehaviour
         while (this.fallenBin.Count > 0)
         {
             Fallen fallen = this.fallenBin.Pop();
-            this.dialogTextbox.Dialog($"God-${fallen.gameObject.name}", 0);
+            this.dialogTextbox.Dialog($"God-{fallen.DialogFileName}", 0);
             Destroy(fallen.gameObject);
         }
 

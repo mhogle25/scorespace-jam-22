@@ -1,3 +1,3 @@
-Why did Giuseppe Angelo attack the spaghetti factorium? [R:god-giuseppe-1] [E]
+[N:God][V:god][S:0.1]Why did Giuseppe Angelo attack the spaghetti factorium? [R:god-giuseppe-1]
 Your work pleases me. The spaghetti swapper will be wormified. [E]
 Hmm, something is not right here. We will have to revisit this. [E]
