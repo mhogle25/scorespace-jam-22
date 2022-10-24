@@ -87,7 +87,6 @@ public class CourtRoomManager : MonoBehaviour
                 this.fallenQueue.Enqueue(f);
             }
             this.musicSource.clip = this.song1;
-            this.musicSource.Play();
             StartNextFallen();
         });
         dialogTextbox.UtilityInitialize();
@@ -128,6 +127,7 @@ public class CourtRoomManager : MonoBehaviour
         fallen = Instantiate(fallen);
         fallen.transform.SetParent(this.background);
         fallen.transform.localScale = Vector3.one;
+        this.musicSource.Play();
         fallen.onDeath.AddListener(() =>
         {
             Continue();
@@ -156,6 +156,7 @@ public class CourtRoomManager : MonoBehaviour
     private void PullLever(Fallen fallen)
     {
         this.lever.Pull();
+        this.musicSource.Pause();
         fallen.Fall();
     }
 
