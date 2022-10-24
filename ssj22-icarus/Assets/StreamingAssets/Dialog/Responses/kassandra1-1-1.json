@@ -1,0 +1,35 @@
+[
+	{
+		"text": "Did one of these fights go a little far, Kassandra? You can tell me.",
+		"dialogIndex": 3,
+		"action": {
+			"score": 1,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "Regular fights? That doesn't sound regular... Did he hit you, Kassandra?",
+		"dialogIndex": 4,
+		"action": {
+			"score": 1,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "Did you kill him",
+		"dialogIndex": 5,
+		"action": {
+			"score": 0,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	}
+]

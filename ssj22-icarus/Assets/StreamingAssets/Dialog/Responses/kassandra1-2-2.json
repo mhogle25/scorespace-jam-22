@@ -1,0 +1,35 @@
+[
+	{
+		"text": "That's frustrating. What do you think he was doing?",
+		"dialogIndex": 20,
+		"action": {
+			"score": 3,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "Working at 3 am? Respectfully, ma'am, that's horse shit. Do you really think he was working?",
+		"dialogIndex": 21,
+		"action": {
+			"score": 1,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "Is that why you killed him? all those nights \"working late\"?",
+		"dialogIndex": 22,
+		"action": {
+			"score": 0,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	}
+]

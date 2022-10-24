@@ -25,7 +25,7 @@ What?[P:0.5] Why would you ask that?[P:0.5] I.[P:0.5].[P:0.5].[P:0.5] I would ne
 Look.[P:0.5] I didn't kill him,[P:0.5] okay?[P:0.5] He was unfaithful,[P:0.5] sure.[P:0.5] That asshole fucked my sister.[P:0.5] That's why I.[P:0.5].[P:0.5].[P:0.5] I mean he.[P:0.5].[P:0.5].[P:0.5] he.[P:0.5].[P:0.5].[P:0.5][E]
 *Sigh*[P:0.5] He deserved it.[P:0.5] After everything I've done for him.[P:0.5].[P:0.5].[P:0.5] *sobs*[P:0.5] That piece of shit.[P:0.5].[P:0.5].[P:0.5][E]
 No![P:0.5] I didn't kill him,[P:0.5] okay?[P:0.5] I didn't![P:0.5] I.[P:0.5].[P:0.5].[P:0.5][E]
-HOW DARE YOU?! I COME HERE EXPECTING YOU TO FIND MY HUSBAND AND INSTEAD YOU THROW AROUND THESE PREPOSTEROUS ACCUSATIONS![R:KASSANDRA1-3-0]
+HOW DARE YOU?! I COME HERE EXPECTING YOU TO FIND MY HUSBAND AND INSTEAD YOU THROW AROUND THESE PREPOSTEROUS ACCUSATIONS![R:kassandra1-3-0]
 .[P:0.5].[P:0.5].[P:0.5][R:kassandra1-3-1]
 .[P:0.5].[P:0.5].[P:0.5][E]
 .[P:0.5].[P:0.5].[P:0.5][E]
