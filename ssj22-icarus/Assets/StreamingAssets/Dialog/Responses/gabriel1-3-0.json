@@ -1,6 +1,6 @@
 [
     {
-        "text": "Of course, of course. What's your wife's name Giuseppe?",
+        "text": "You're right. Sorry about that Gabriel. Now, what can you tell me?",
         "dialogIndex": 28,
         "action": {
             "score": 1,
@@ -12,7 +12,7 @@
         }
     },
     {
-        "text": "Oh? Where do you work, Giuseppe?",
+        "text": "You encounter a lot of ruffians, Gabriel? What do you do?",
         "dialogIndex": 32,
         "action": {
             "score": 1,
@@ -23,7 +23,7 @@
         }
     },
     {
-        "text": "<Lie> You're lying Giuseppe. We have a witness who saw you at the spaghetti factorium last night.",
+        "text": "<Punch him again> We don't have time for these GAMES, Gabriel!",
         "dialogIndex": 36,
         "action": {
             "score": 0,
