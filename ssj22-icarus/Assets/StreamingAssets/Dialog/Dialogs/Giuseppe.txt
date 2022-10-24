@@ -1,4 +1,4 @@
-[N:Giuseppe Angelo]I was-a framed! [P:0.5] I-a would never replace-a the spaghetti at the spaghetti factorium with-a worms. [P:0.5] Giuseppe was just-a sleeping at home with my wife. [P:0.5] I didn't do anything mama mia[R:giuseppe1-0-0]
+[V:high][N:Giuseppe Angelo]I was-a framed! [P:0.5] I-a would never replace-a the spaghetti at the spaghetti factorium with-a worms. [P:0.5] Giuseppe was just-a sleeping at home with my wife. [P:0.5] I didn't do anything mama mia[R:giuseppe1-0-0]
 Giuseppe don't-a trust you. [P:0.5] Giuseppe doesn't have to tell-a you inquisitors anything! [P:0.5][R:giuseppe1-1-0]
 Really? [P:0.5] Your-a inquisitor boss give-a you a hard time-a too huh? [P:0.5][R:giuseppe1-1-1]
 Oh like you-a wouldn't believe. [P:0.5] He really had to be-a taken down a peg-a. [P:0.5][E]

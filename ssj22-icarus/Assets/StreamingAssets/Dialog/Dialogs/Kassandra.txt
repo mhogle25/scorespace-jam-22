@@ -1,4 +1,4 @@
-[N:Kassandra Bolt]Well??[P:0.5] Have you all found my dear husband?[P:0.5] Is that why you called me over here?[P:0.5] You know he's been missing for three days![P:0.5][R:kassandra1-0-0]
+[V:extra-high][N:Kassandra Bolt]Well??[P:0.5] Have you all found my dear husband?[P:0.5] Is that why you called me over here?[P:0.5] You know he's been missing for three days![P:0.5][R:kassandra1-0-0]
 Arguments?[P:0.5] I suppose every married couple gets into those.[P:0.5] But nothing out of the usual![P:0.5] Just regular spats here and there.[P:0.5][R:kassandra1-1-0]
 Hmmm.[P:0.5] No,[P:0.5] none that I can think of.[P:0.5] They were all just regular old fights that meant nothing.[P:0.5][R:kassandra1-1-1]
 Well,[P:0.5] I did catch him cheating.[P:0.5] But I.[P:0.5].[P:0.5].[P:0.5] I would never do anything to him![P:0.5] Honest![P:0.5][E]

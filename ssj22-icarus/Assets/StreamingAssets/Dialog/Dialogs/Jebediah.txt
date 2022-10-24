@@ -1,4 +1,4 @@
-[N:Jebediah J. Jameson]You're a goddamn menace, Inquisitor! [P:0.5] You can't hold me like this. [P:0.5] Anything that happens to me will be published in tomorrow's issue of the Congregation! [P:0.5] You'll be all over the news![R:jebediah1-0-0]
+[V:medium][N:Jebediah J. Jameson]You're a goddamn menace, Inquisitor! [P:0.5] You can't hold me like this. [P:0.5] Anything that happens to me will be published in tomorrow's issue of the Congregation! [P:0.5] You'll be all over the news![R:jebediah1-0-0]
 I'll tell you what I was doing, I was uprooting a MENACE. [P:0.5] I bring truth to the peoples' ears one way or another.[R:jebediah1-1-0]
 Yeah we all know what ‘being out of here' means, a-hole. [P:0.5] I've heard the rumors. [P:0.5] I've got ears to the ground.[R:jebediah1-1-1]
 And why the fuck would I do that, Quizzy. [P:0.5] Let me outta' here.[E]

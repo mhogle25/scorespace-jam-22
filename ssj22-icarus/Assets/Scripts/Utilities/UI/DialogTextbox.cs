@@ -275,6 +275,7 @@ namespace BF2D.UI {
             this.activeLines = null;
             ResetControlVariables(0);
             this.textField.text = string.Empty;
+            this.nametagTextField.text = string.Empty;
             this.scrollbar.value = 1;
             this.responseOptionsPanel.gameObject.SetActive(false);
             UtilityFinalize();
@@ -362,6 +363,7 @@ namespace BF2D.UI {
                 BF2D.Utilities.Audio.PlayAudioSource(this.confirmAudioSource);       //Play the confirm sound
                 this.continueIcon.enabled = false;
                 this.textField.text = string.Empty;
+                this.nametagTextField.text = string.Empty;
                 this.scrollbar.value = 1;
                 if (this.nextDialogIndex != DialogTextbox.defaultValue)
                 {
@@ -395,6 +397,7 @@ namespace BF2D.UI {
                 this.state = DialogQueueHandler;
                 //Set the dialog contents to the empty string
                 this.textField.text = string.Empty;
+                this.nametagTextField.text = string.Empty;
                 this.scrollbar.value = 1;
                 //Call the callback function if it exists
                 this.callback?.Invoke();
