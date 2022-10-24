@@ -12,7 +12,7 @@
         }
     },
     {
-        "text": "You're right. I got ahead of myself. But we're just trying to understand what's happening. Are you sure you don't do anything else with these people? Have you had any conflicts with them?",
+        "text": "You're right. But we're just want to understand. You're sure you don't do anything else with them? Any conflicts?",
         "dialogIndex": 12,
         "action": {
             "score": 1,
@@ -23,7 +23,7 @@
         }
     },
     {
-        "text": "<Lie> I'm sorry. I'm just stressed. We can get some help for you and fix those wings, but the only way is to know what caused them",
+        "text": "<Lie> I'm sorry. I'm just stressed. We can help fix those wings, but the only way is to know what caused them.",
         "dialogIndex": 13,
         "action": {
             "score": 3,
