@@ -1,10 +1,10 @@
 [
     {
-        "text": "<Slap him>",
+        "text": "Can you explain more? What caused you to become a Fallen?",
         "dialogIndex": 33,
         "action": {
-            "score": 3,
-            "morale": 1,
+            "score": 1,
+            "morale": 0,
             "bribe":0
 
         },
@@ -12,7 +12,7 @@
         }
     },
     {
-        "text": "So you work at the same factory that was attacked. That's suspicious",
+        "text": "Oh, I see. It's a rough way of life, isn't it?",
         "dialogIndex": 34,
         "action": {
             "score": 1,
@@ -23,7 +23,7 @@
         }
     },
     {
-        "text": "Why aren't you as concerned as everyone else who works at the factory Giuseppe? You seem like you don't care.",
+        "text": "Thank you for telling me. I'm sure you know that this is against regulation? Work like this?",
         "dialogIndex": 35,
         "action": {
             "score": 1,

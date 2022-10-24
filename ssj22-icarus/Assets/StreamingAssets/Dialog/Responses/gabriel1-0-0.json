@@ -23,7 +23,7 @@
         }
     },
     {
-        "text": "<Violence> A client huh? Confess your crimes and be honest if you know what's good for you.",
+        "text": "<Punch him> A client huh? Confess your crimes and be honest if you know what's good for you.",
         "dialogIndex": 27,
         "action": {
             "score": 0,

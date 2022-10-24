@@ -1,10 +1,10 @@
 [
     {
-        "text": "<Lie> You're still lying Giuseppe. Last chance or I pull the lever",
+        "text": "Gabriel, just talk to me already.",
         "dialogIndex": 37,
         "action": {
             "score": 0,
-            "morale": 1,
+            "morale": 0,
             "bribe":0
 
         },
@@ -12,7 +12,7 @@
         }
     },
     {
-        "text": "DON'T LIE TO ME YOU BITCH! TELL ME OR I PULL THE LEVER RIGHT NOW!",
+        "text": "Are you going to talk or not?!",
         "dialogIndex": 38,
         "action": {
             "score": 0,
@@ -23,11 +23,11 @@
         }
     },
     {
-        "text": "...",
+        "text": "<Punch him again>",
         "dialogIndex": 39,
         "action": {
-            "score": 3,
-            "morale": 0,
+            "score": 0,
+            "morale": 1,
             "bribe":0
         },
         "prereq": {
