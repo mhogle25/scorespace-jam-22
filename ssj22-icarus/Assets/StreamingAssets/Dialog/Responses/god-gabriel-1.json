@@ -1,0 +1,37 @@
+[
+    {
+        "text": "He sold himself as a prostitute.",
+        "dialogIndex": 1,
+        "action": {
+            "score": 5,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "He was outspoken against the teachings of Daedalus.",
+        "dialogIndex": 2,
+        "action": {
+            "score": -5,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "He defied law enforcement.",
+        "dialogIndex": 2,
+        "action": {
+            "score": -5,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "text": "She discovered an event six months ago, against the will of God, caused the Falling.",
+        "dialogIndex": 1,
+        "action": {
+            "score": 5,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "She discovered Rufus Rodgers is the root of the Falling.",
+        "dialogIndex": 2,
+        "action": {
+            "score": -5,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "She discovered God is conducting experiments on the people of Daedalus.",
+        "dialogIndex": 2,
+        "action": {
+            "score": -5,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]
