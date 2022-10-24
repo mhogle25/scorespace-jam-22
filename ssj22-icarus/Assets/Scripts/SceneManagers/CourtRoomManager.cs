@@ -11,6 +11,7 @@ using TMPro;
 
 public class CourtRoomManager : MonoBehaviour
 {
+    [SerializeField] private God god = null;
     [Header("Fallen")]
     [SerializeField] private Fallen initFallenPrefab = null;
     [SerializeField] private List<Fallen> fallenPrefabs = new();
@@ -166,10 +167,11 @@ public class CourtRoomManager : MonoBehaviour
 
     private void BeginGodEncounter()
     {
-        this.musicSource.Stop();
-        this.musicSource.clip = song2;
-        this.musicSource.Play();
         Debug.Log("GOD ACTIVATE");
+        this.god.Begin(() =>
+        {
+            FinalizeGame();
+        });
     }
 
     private void FinalizeGame()
