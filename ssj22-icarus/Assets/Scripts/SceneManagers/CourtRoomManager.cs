@@ -27,8 +27,10 @@ public class CourtRoomManager : MonoBehaviour
     [Header("Misc")]
     [SerializeField] private Image overlay = null;
     [SerializeField] private float overlayFadeRate = 0.001f;
+    [SerializeField] private int amountToQueue = 5;
 
     private Queue<Fallen> fallenQueue = new();
+    private Stack<Fallen> fallenBin = new();
 
     public Score GetScore
     {
@@ -82,7 +84,7 @@ public class CourtRoomManager : MonoBehaviour
             this.fallenQueue.Enqueue(this.initFallenPrefab);
             System.Random rand = new System.Random();
             List<Fallen> shuffled = this.fallenPrefabs.OrderBy(_ => rand.Next()).ToList();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < this.amountToQueue; i++)
             {
                 this.fallenQueue.Enqueue(shuffled[i]);
             }
@@ -126,6 +128,7 @@ public class CourtRoomManager : MonoBehaviour
     {
         Fallen fallen = this.fallenQueue.Dequeue();
         fallen = Instantiate(fallen);
+        this.fallenBin.Push(fallen);
         fallen.transform.SetParent(this.background);
         fallen.transform.localScale = Vector3.one;
         this.musicSource.Play();
@@ -135,7 +138,7 @@ public class CourtRoomManager : MonoBehaviour
         });
         fallen.Begin(dialogTextbox, lever, () =>
         {
-            PullLever(fallen);
+            PullLever();
         });
     }
 
@@ -154,11 +157,11 @@ public class CourtRoomManager : MonoBehaviour
         currentScore.score += value;
     }
 
-    private void PullLever(Fallen fallen)
+    private void PullLever()
     {
         this.lever.Pull();
         this.musicSource.Pause();
-        fallen.Fall();
+        this.fallenBin.Peek().Fall();
     }
 
     private void BeginGodEncounter()
