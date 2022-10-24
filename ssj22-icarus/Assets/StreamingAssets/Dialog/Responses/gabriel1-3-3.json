@@ -1,0 +1,37 @@
+[
+    {
+        "text": "<Lie> You're still lying Giuseppe. Last chance or I pull the lever",
+        "dialogIndex": 37,
+        "action": {
+            "score": 0,
+            "morale": 1,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "DON'T LIE TO ME YOU BITCH! TELL ME OR I PULL THE LEVER RIGHT NOW!",
+        "dialogIndex": 38,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "...",
+        "dialogIndex": 39,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

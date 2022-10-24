@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Black wings are a sign of crimes. Try to think why.",
+        "dialogIndex": 15,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "How long have you had them?",
+        "dialogIndex": 19,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "I assume this is related to your job. That or you might have done something else?",
+        "dialogIndex": 23,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

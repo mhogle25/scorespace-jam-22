@@ -1,0 +1,37 @@
+[
+    {
+        "text": "<Slap him>",
+        "dialogIndex": 33,
+        "action": {
+            "score": 3,
+            "morale": 1,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "So you work at the same factory that was attacked. That's suspicious",
+        "dialogIndex": 34,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Why aren't you as concerned as everyone else who works at the factory Giuseppe? You seem like you don't care.",
+        "dialogIndex": 35,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

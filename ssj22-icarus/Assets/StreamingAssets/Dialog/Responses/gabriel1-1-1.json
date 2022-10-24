@@ -1,0 +1,37 @@
+[
+    {
+        "text": "I knew you did more than just talk. Prostitution is a crime, you know.",
+        "dialogIndex": 3,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Have you ever considered a different line of work? You seem like a good guy. I don't know if this is the right way to go about it though. Maybe meet new people but don't make money from it?",
+        "dialogIndex": 4,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "'He?'",
+        "dialogIndex": 5,
+        "action": {
+            "score": 3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

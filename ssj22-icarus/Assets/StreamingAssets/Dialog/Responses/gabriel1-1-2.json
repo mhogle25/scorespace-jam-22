@@ -1,0 +1,37 @@
+[
+    {
+        "text": "That sounds bad. I didn't know it was so rough out there.",
+        "dialogIndex": 7,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "Then maybe you shouldn't be trying to go out there and tempting people for business!",
+        "dialogIndex": 8,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "What street do you usually work on?",
+        "dialogIndex": 9,
+        "action": {
+            "score":3,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]

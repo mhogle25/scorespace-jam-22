@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Yes you do! I can see your wings. Confess!",
+        "dialogIndex": 11,
+        "action": {
+            "score": 0,
+            "morale": 0,
+            "bribe":0
+
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "You're right. I got ahead of myself. But we're just trying to understand what's happening. Are you sure you don't do anything else with these people? Have you had any conflicts with them?",
+        "dialogIndex": 12,
+        "action": {
+            "score": 1,
+            "morale": 0,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    },
+    {
+        "text": "<Lie> I'm sorry. I'm just stressed. We can get some help for you and fix those wings, but the only way is to know what caused them",
+        "dialogIndex": 13,
+        "action": {
+            "score": 3,
+            "morale": 1,
+            "bribe":0
+        },
+        "prereq": {
+        }
+    }
+    
+]
