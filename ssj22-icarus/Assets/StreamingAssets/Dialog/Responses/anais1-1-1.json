@@ -1,9 +1,9 @@
 [
     {
-        "text": "Then you should know that what's going to happen can't be stopped. Help me out here. While ya' still can.",
+        "text": "What kind of event? Is it something that can be reversed?",
         "dialogIndex": 3,
         "action": {
-            "score": 0,
+            "score": 1,
             "morale": 0,
             "bribe":0
 
@@ -12,7 +12,7 @@
         }
     },
     {
-        "text": "There's a difference between being out with a clean conscience and being out with one as dirty as your wings.",
+        "text": "How'd you change? You've got those wings and all.",
         "dialogIndex": 4,
         "action": {
             "score": 3,
@@ -23,7 +23,7 @@
         }
     },
     {
-        "text": "Alright, see ya' later Jebediah J. Jameson.",
+        "text": "I don't believe you, Fontaine. We're still the same as ever. The Big Man wouldn't allow it.",
         "dialogIndex": 5,
         "action": {
             "score": 0,
