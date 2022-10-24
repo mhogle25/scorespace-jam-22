@@ -1,0 +1,35 @@
+[
+	{
+		"text": "That’s actually what we wanted to talk to you about. Did you and your husband get into any arguments?",
+		"dialogIndex": 1,
+		"action": {
+			"score": 1,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "Of course! We're all very worried about him. Did he seem stressed before he went missing? Anything unusual?",
+		"dialogIndex": 14,
+		"action": {
+			"score": 3,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "I know you killed him Kassandra.",
+		"dialogIndex": 27,
+		"action": {
+			"score": 1,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	}
+]

@@ -1,9 +1,9 @@
 [
     {
-        "text": "Then you should know that what's going to happen can't be stopped. Help me out here. While ya' still can.",
+        "text": "I knew you did more than just talk. Prostitution is a crime, you know.",
         "dialogIndex": 3,
         "action": {
-            "score": 0,
+            "score": 1,
             "morale": 0,
             "bribe":0
 
@@ -12,10 +12,10 @@
         }
     },
     {
-        "text": "There's a difference between being out with a clean conscience and being out with one as dirty as your wings.",
+        "text": "Have you ever considered a different line of work? You seem like a good guy. I don't know if this is the right way to go about it though. Maybe meet new people but don't make money from it?",
         "dialogIndex": 4,
         "action": {
-            "score": 3,
+            "score": 0,
             "morale": 0,
             "bribe":0
         },
@@ -23,10 +23,10 @@
         }
     },
     {
-        "text": "Alright, see ya' later Jebediah J. Jameson.",
+        "text": "'He?'",
         "dialogIndex": 5,
         "action": {
-            "score": 0,
+            "score": 3,
             "morale": 0,
             "bribe":0
         },

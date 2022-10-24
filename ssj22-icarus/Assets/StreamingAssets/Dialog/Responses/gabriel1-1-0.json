@@ -1,9 +1,9 @@
 [
     {
-        "text": "C'mon Jay, work with me. What were you doing when you first turned. Easy in, easy out.",
+        "text": "Only dinner and chatting?",
         "dialogIndex": 2,
         "action": {
-            "score": 0,
+            "score": 3,
             "morale": 0,
             "bribe":0
 
@@ -12,10 +12,10 @@
         }
     },
     {
-        "text": "Another way? What sort of way is that, Jebediah?",
+        "text": "What do you mean 'usually civil'?",
         "dialogIndex": 6,
         "action": {
-            "score": 1,
+            "score": 3,
             "morale": 0,
             "bribe":0
         },
@@ -23,10 +23,10 @@
         }
     },
     {
-        "text": "You're a real good angel, Jay. I'm sure nothing would come up with just a little bit of digging, huh?",
+        "text": "And why are your wings black if all you do is talk with people and go out for drinks? Stop lying!",
         "dialogIndex": 10,
         "action": {
-            "score": 1,
+            "score": 0,
             "morale": 0,
             "bribe":0
         },

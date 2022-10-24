@@ -1,0 +1,35 @@
+[
+	{
+		"text": "...",
+		"dialogIndex": 33,
+		"action": {
+			"score": ,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "Last chance Kassandra.",
+		"dialogIndex": 34,
+		"action": {
+			"score": 3,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "ADMIT IT!",
+		"dialogIndex": 35,
+		"action": {
+			"score": 0,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	}
+]

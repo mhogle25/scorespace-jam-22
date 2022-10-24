@@ -1,9 +1,9 @@
 [
     {
-        "text": "Then you should know that what's going to happen can't be stopped. Help me out here. While ya' still can.",
-        "dialogIndex": 3,
+        "text": "What caused the event?",
+        "dialogIndex": 33,
         "action": {
-            "score": 0,
+            "score": 1,
             "morale": 0,
             "bribe":0
 
@@ -12,8 +12,8 @@
         }
     },
     {
-        "text": "There's a difference between being out with a clean conscience and being out with one as dirty as your wings.",
-        "dialogIndex": 4,
+        "text": "Think differently, how?",
+        "dialogIndex": 34,
         "action": {
             "score": 3,
             "morale": 0,
@@ -23,8 +23,8 @@
         }
     },
     {
-        "text": "Alright, see ya' later Jebediah J. Jameson.",
-        "dialogIndex": 5,
+        "text": "I've always been this way, Fontaine.",
+        "dialogIndex": 35,
         "action": {
             "score": 0,
             "morale": 0,

@@ -1,0 +1,35 @@
+[
+	{
+		"text": "You'd never allow it? What does that mean",
+		"dialogIndex": 7,
+		"action": {
+			"score": 0,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "<lie> I cheated on her, too. She knew, but she never said anything. *chuckle*",
+		"dialogIndex": 8,
+		"action": {
+			"score": 1,
+			"morale": 1,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	},
+	{
+		"text": "But you did allow it, didn't you? For too long. Did it become to much to bare?",
+		"dialogIndex": 9,
+		"action": {
+			"score": 0,
+			"morale": 0,
+			"bribe": 0
+		},
+		"prereq": {
+		}
+	}
+]

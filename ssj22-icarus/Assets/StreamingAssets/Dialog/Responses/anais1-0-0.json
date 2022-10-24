@@ -1,9 +1,9 @@
 [
     {
-        "text": "Sir, please calm down. We just want to know how you came by those Fallen wings of yours. You can't hide them.",
+        "text": "That's right. And what have you learned so far? Maybe we could exchange notes.",
         "dialogIndex": 1,
         "action": {
-            "score": 0,
+            "score": 3,
             "morale": 0,
             "bribe":0
 
@@ -12,7 +12,7 @@
         }
     },
     {
-        "text": "You're full of shit, Jay. Everyone knows the Congregation is a tabloid. No one will believe it or give it a fuck.",
+        "text": "Yep. We're bringing in all Fallen for interviews. I'm sure you've seen yourself in the mirror lately.",
         "dialogIndex": 14,
         "action": {
             "score": 1,
@@ -23,10 +23,10 @@
         }
     },
     {
-        "text": "<Lie> If anything happened, the Inquisition would come down on it harder than my Aunt Carol at a Crate n' Barrel.",
+        "text": "<Lie> No, we're simply an interested party. We try to avoid those Inquisition types.",
         "dialogIndex": 27,
         "action": {
-            "score": 1,
+            "score": 0,
             "morale": 1,
             "bribe":0
         },
