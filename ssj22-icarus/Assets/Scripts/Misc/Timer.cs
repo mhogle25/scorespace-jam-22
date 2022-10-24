@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private Image sliderFill = null;
     [SerializeField] private int scoreModifier = -1;
-    public float TimerSpeed
+    public float Speed
     {
         get
         {

@@ -13,9 +13,9 @@
     },
     {
         "text": "He owned multiple speakeasies.",
-        "dialogIndex": 2,
+        "dialogIndex": 1,
         "action": {
-            "score": -5,
+            "score": 5,
             "morale": 0,
             "bribe":0
         },
@@ -24,9 +24,9 @@
     },
     {
         "text": "He was violent to his subordinates.",
-        "dialogIndex": 1,
+        "dialogIndex": 2,
         "action": {
-            "score": 5,
+            "score": -5,
             "morale": 0,
             "bribe":0
         },

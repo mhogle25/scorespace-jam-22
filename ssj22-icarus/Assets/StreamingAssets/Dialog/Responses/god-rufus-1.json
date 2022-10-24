@@ -1,7 +1,7 @@
 [
     {
         "text": "He drunkenly broke into a hospital and stole their food.",
-        "dialogueindex": 1,
+        "dialogIndex": 1,
         "action": {
             "score": 5,
             "morale": 0,
@@ -13,7 +13,7 @@
     },
     {
         "text": "He attacked a waiter at a restaurant.",
-        "dialogueindex": 2,
+        "dialogIndex": 2,
         "action": {
             "score": -5,
             "morale": 0,
@@ -24,7 +24,7 @@
     },
     {
         "text": "She discovered God is conducting experiments on the people of Daedalus.",
-        "dialogueindex": 2,
+        "dialogIndex": 2,
         "action": {
             "score": -5,
             "morale": 0,

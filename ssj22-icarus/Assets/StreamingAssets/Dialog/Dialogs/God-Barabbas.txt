@@ -1,3 +1,3 @@
-What has Barabbas Sutton been hiding? [R:god-barabbas-1] [E]
+[N:God][V:god][S:0.1]What has Barabbas Sutton been hiding? [R:god-barabbas-1]
 Your work pleases me. The bloodthirsty will be cleansed. [E]
 Hmm, something is not right here. We will have to revisit this. [E]
