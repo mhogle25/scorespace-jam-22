@@ -105,7 +105,7 @@ public class God : MonoBehaviour
 
         this.dialogTextbox.Dialog(new List<string>
         {
-            $"[N:God][V:{this.voiceKey}][S:0.1]You are dismissed. See you next Tuesday."
+            $"[N:God][V:{this.voiceKey}][S:0.1]You are dismissed.[E]"
         },
         0
         );
