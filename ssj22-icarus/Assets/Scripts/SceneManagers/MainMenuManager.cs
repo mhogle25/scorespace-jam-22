@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Image overlay;
-    [SerializeField] private float overlayFadeRate = 0.001f;
+    [SerializeField] private float overlayFadeRate = 0.01f;
     [SerializeField] private SpriteRenderer city = null;
     [SerializeField] private float citySpeed = 0.2f;
     [SerializeField] private int cityMoveThreshold = 10000;
     [SerializeField] private AudioSource music = null;
+    [SerializeField] private Button tutorialButton;
     
     Action state;
 
@@ -22,6 +23,8 @@ public class MainMenuManager : MonoBehaviour
     private void Update()
     {
         this.state?.Invoke();
+
+        this.tutorialButton.gameObject.SetActive(!GlobalManager.Instance.FirstTime);
     }
 
     public void QuitGame()
@@ -42,7 +45,14 @@ public class MainMenuManager : MonoBehaviour
         if (this.overlay.color.a > 1f - this.overlayFadeRate)
         {
             this.state = null;
-            SceneManager.LoadScene("Court Room");
+            if (GlobalManager.Instance.FirstTime)
+            {
+                SceneManager.LoadScene("Tutorial");
+            }
+            else
+            {
+                SceneManager.LoadScene("Court Room");
+            }
             return;
         }
 
@@ -70,7 +80,8 @@ public class MainMenuManager : MonoBehaviour
 
     public void LoadTutorialScene()
     {
-        SceneManager.LoadScene("Tutorial");
+        if (!GlobalManager.Instance.FirstTime)
+            SceneManager.LoadScene("Tutorial");
     }
 
     public void LoadCreditsScene()

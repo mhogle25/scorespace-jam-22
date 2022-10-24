@@ -44,6 +44,19 @@ public class GlobalManager : MonoBehaviour
         }
     }
 
+    public bool FirstTime
+    {
+        get
+        {
+            return this.saveLoadManager.FirstTime;
+        }
+
+        set
+        {
+            this.saveLoadManager.FirstTime = value;
+        }
+    }
+
     public void AddNewScore()
     {
         this.saveLoadManager.NewScore(this.newScore);

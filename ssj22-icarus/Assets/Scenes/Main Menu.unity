@@ -1150,11 +1150,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overlay: {fileID: 6340897429295794403}
-  overlayFadeRate: 0.001
+  overlayFadeRate: 0.01
   city: {fileID: 2104594371}
   citySpeed: 0.1
   cityMoveThreshold: 20000
   music: {fileID: 1550070207}
+  tutorialButton: {fileID: 1325853320}
 --- !u!4 &1550070206
 Transform:
   m_ObjectHideFlags: 0

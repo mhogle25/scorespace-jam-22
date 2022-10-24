@@ -545,7 +545,7 @@ MonoBehaviour:
   spriteFadeRate: 0.5
   voiceKey: god
   timerDefaultSpeed: 0.1
-  bribeFactor: 0.5
+  bribeFactor: 0.3
 --- !u!1 &109597430
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,7 +2636,6 @@ MonoBehaviour:
   - {fileID: 8555457058165799007, guid: 1ce8e41c69c6982448f1eae0ba0ee291, type: 3}
   - {fileID: 8555457058165799007, guid: a9496024d976c8741a09b682ce953436, type: 3}
   - {fileID: 8555457058165799007, guid: 9429f981149caff4ca3be50eaf89177d, type: 3}
-  - {fileID: 8555457058165799007, guid: dbe7e2260e162114b99929ecf25e1266, type: 3}
   dialogTextbox: {fileID: 1492842867}
   background: {fileID: 475916552}
   lever: {fileID: 1660943746}
@@ -2645,7 +2644,7 @@ MonoBehaviour:
   musicSource: {fileID: 1066859610}
   song: {fileID: 8300000, guid: 264bab8c89349644c9af624e0966761c, type: 3}
   overlay: {fileID: 779517587}
-  overlayFadeRate: 0.001
+  overlayFadeRate: 0.01
   amountToQueue: 4
 --- !u!4 &1066859609
 Transform:

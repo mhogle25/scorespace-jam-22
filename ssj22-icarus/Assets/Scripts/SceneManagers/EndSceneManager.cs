@@ -10,7 +10,7 @@ public class EndSceneManager : MonoBehaviour
     [SerializeField] private Image overlay = null;
     [SerializeField] private SpriteRenderer white = null;
     [SerializeField] private SpriteRenderer black = null;
-    [SerializeField] private float overlayFadeRate = 0.001f;
+    [SerializeField] private float overlayFadeRate = 0.01f;
 
     Action state;
 

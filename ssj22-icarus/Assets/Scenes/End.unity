@@ -510,7 +510,7 @@ MonoBehaviour:
   overlay: {fileID: 6340897429295794403}
   white: {fileID: 1312893526}
   black: {fileID: 918192043}
-  overlayFadeRate: 0.001
+  overlayFadeRate: 0.01
 --- !u!114 &2190502210188830075
 MonoBehaviour:
   m_ObjectHideFlags: 0

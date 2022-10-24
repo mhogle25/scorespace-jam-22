@@ -26,7 +26,7 @@ public class CourtRoomManager : MonoBehaviour
     [SerializeField] private AudioClip song = null;
     [Header("Misc")]
     [SerializeField] private Image overlay = null;
-    [SerializeField] private float overlayFadeRate = 0.001f;
+    [SerializeField] private float overlayFadeRate = 0.01f;
     [SerializeField] private int amountToQueue = 4;
 
     private readonly Queue<Fallen> fallenQueue = new();

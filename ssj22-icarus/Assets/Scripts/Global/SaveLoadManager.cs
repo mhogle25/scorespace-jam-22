@@ -80,6 +80,19 @@ public class SaveLoadManager
         }
     }
 
+    public bool FirstTime
+    {
+        get
+        {
+            return this.saveData.FirstTime;
+        }
+
+        set
+        {
+            this.saveData.FirstTime = value;
+        }
+    }
+
     private SaveData saveData = new();
 
     public void SaveGame()

@@ -20,7 +20,7 @@ public class God : MonoBehaviour
     [SerializeField] private float spriteFadeRate = 0.5f;
     [SerializeField] private string voiceKey = "god";
     [SerializeField] private float timerDefaultSpeed = 0.1f;
-    [SerializeField] private float bribeFactor = 0.5f;
+    [SerializeField] private float bribeFactor = 0.3f;
 
     Action state;
     Score currentScore = null;
