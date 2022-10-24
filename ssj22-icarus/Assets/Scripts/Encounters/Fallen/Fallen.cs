@@ -43,7 +43,7 @@ public class Fallen : MonoBehaviour
 
         if (this.transform.localPosition.y < -4)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
             this.onDeath?.Invoke();
         }
     }

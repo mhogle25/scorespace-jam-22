@@ -39,6 +39,7 @@ namespace BF2D.UI {
         public float DefaultMessageSpeed = 0.05f;
         public bool MessageInterrupt = false;
         public bool AutoPass = false;
+        public bool VoiceMuted = false;
         [SerializeField] private UnityEvent onEndOfQueuedDialogs = new();
 
         [Header("Dialog Responses")]
@@ -61,6 +62,7 @@ namespace BF2D.UI {
         [SerializeField] private AudioClip defaultVoice = null;
 
         //Getter Setters and their private variables
+        public UnityEvent OnEndOfQueuedDialogs { get { return this.onEndOfQueuedDialogs; } }
         public string DialogFilesPath { get { return this.dialogFilesPath; } set { this.dialogFilesPath = value; } }
         public string DialogResponseFilesPath { get { return this.responseOptionsFilesPath; } set { this.responseOptionsFilesPath = value; } }
 
@@ -363,7 +365,6 @@ namespace BF2D.UI {
                 BF2D.Utilities.Audio.PlayAudioSource(this.confirmAudioSource);       //Play the confirm sound
                 this.continueIcon.enabled = false;
                 this.textField.text = string.Empty;
-                this.nametagTextField.text = string.Empty;
                 this.scrollbar.value = 1;
                 if (this.nextDialogIndex != DialogTextbox.defaultValue)
                 {
@@ -538,7 +539,7 @@ namespace BF2D.UI {
                         break;
                 }
             } else { //Basic character
-                if (message[this.messageIndex] != ' ')
+                if (message[this.messageIndex] != ' ' && !this.VoiceMuted)
                 {
                     BF2D.Utilities.Audio.PlayAudioSource(this.voiceAudioSource);
                 }

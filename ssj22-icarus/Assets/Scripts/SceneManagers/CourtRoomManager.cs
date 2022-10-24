@@ -23,15 +23,14 @@ public class CourtRoomManager : MonoBehaviour
     [SerializeField] private DisplayOverlay displayOverlay = null;
     [Header("Audio")]
     [SerializeField] private AudioSource musicSource = null;
-    [SerializeField] private AudioClip song1 = null;
-    [SerializeField] private AudioClip song2 = null;
+    [SerializeField] private AudioClip song = null;
     [Header("Misc")]
     [SerializeField] private Image overlay = null;
     [SerializeField] private float overlayFadeRate = 0.001f;
-    [SerializeField] private int amountToQueue = 5;
+    [SerializeField] private int amountToQueue = 4;
 
-    private Queue<Fallen> fallenQueue = new();
-    private Stack<Fallen> fallenBin = new();
+    private readonly Queue<Fallen> fallenQueue = new();
+    private readonly Stack<Fallen> fallenBin = new();
 
     public Score GetScore
     {
@@ -79,7 +78,7 @@ public class CourtRoomManager : MonoBehaviour
 
     private IEnumerator InitBegin()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         dialogTextbox.Message("[V:medium][N:Inquisitor][S:0.1]Have the first fallen enter.", () =>
         {
             this.fallenQueue.Enqueue(this.initFallenPrefab);
@@ -89,7 +88,7 @@ public class CourtRoomManager : MonoBehaviour
             {
                 this.fallenQueue.Enqueue(shuffled[i]);
             }
-            this.musicSource.clip = this.song1;
+            this.musicSource.clip = this.song;
             StartNextFallen();
         });
         dialogTextbox.UtilityInitialize();
@@ -168,10 +167,14 @@ public class CourtRoomManager : MonoBehaviour
     private void BeginGodEncounter()
     {
         Debug.Log("GOD ACTIVATE");
-        this.god.Begin(() =>
-        {
-            FinalizeGame();
-        });
+        this.god.Begin(
+            this.currentScore,
+            this.fallenBin,
+            () =>
+            {
+                FinalizeGame();
+            }
+        );
     }
 
     private void FinalizeGame()

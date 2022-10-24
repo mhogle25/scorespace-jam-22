@@ -418,7 +418,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: fed5b419ff63c2747a48e48a2517bad9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -438,11 +438,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 4fd700bfe679e6448b8e2388dc86342c, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -536,6 +536,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 669e27cc324ca764bb56f9ef24caa9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 74745290}
+  dialogTextbox: {fileID: 1492842867}
+  musicSource: {fileID: 1066859610}
+  sfxSource: {fileID: 74745291}
+  song: {fileID: 8300000, guid: 664eddbb862f5c34489d373883995f88, type: 3}
+  fadeRate: 0.5
+  voiceKey: low
 --- !u!1 &109597430
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,8 +871,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.57376146, g: 0.8679245, b: 0.40530434, a: 1}
-    m_PressedColor: {r: 0.37706098, g: 0.5754717, b: 0.26330546, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.46666667, b: 0.46666667, a: 1}
+    m_PressedColor: {r: 0.5647059, g: 0.24705882, b: 0.24705882, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2424,8 +2431,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.57376146, g: 0.8679245, b: 0.40530434, a: 1}
-    m_PressedColor: {r: 0.37706098, g: 0.5754717, b: 0.26330546, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.46666667, b: 0.46666667, a: 1}
+    m_PressedColor: {r: 0.5647059, g: 0.24705882, b: 0.24705882, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2617,6 +2624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbb15e325a55494ba31208e086286bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  god: {fileID: 74745292}
   initFallenPrefab: {fileID: 8555457058165799007, guid: dbe7e2260e162114b99929ecf25e1266, type: 3}
   fallenPrefabs:
   - {fileID: 8555457058165799007, guid: 1ce8e41c69c6982448f1eae0ba0ee291, type: 3}
@@ -2630,11 +2638,10 @@ MonoBehaviour:
   scoreDisplay: {fileID: 699538689}
   displayOverlay: {fileID: 1964468232}
   musicSource: {fileID: 1066859610}
-  song1: {fileID: 8300000, guid: 264bab8c89349644c9af624e0966761c, type: 3}
-  song2: {fileID: 8300000, guid: 664eddbb862f5c34489d373883995f88, type: 3}
+  song: {fileID: 0}
   overlay: {fileID: 779517587}
   overlayFadeRate: 0.001
-  amountToQueue: 5
+  amountToQueue: 0
 --- !u!4 &1066859609
 Transform:
   m_ObjectHideFlags: 0
