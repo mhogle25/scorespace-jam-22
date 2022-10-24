@@ -1322,7 +1322,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1066859608}
         m_TargetAssemblyTypeName: CourtRoomManager, Assembly-CSharp
-        m_MethodName: UpdateScore
+        m_MethodName: IncrementScore
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

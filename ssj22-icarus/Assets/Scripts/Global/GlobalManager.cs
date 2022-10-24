@@ -15,6 +15,8 @@ public class GlobalManager : MonoBehaviour
 
     private readonly SaveLoadManager saveLoadManager = new();
 
+    public Score newScore = null;
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -42,9 +44,9 @@ public class GlobalManager : MonoBehaviour
         }
     }
 
-    public void NewScore(Score score)
+    public void AddNewScore()
     {
-        this.saveLoadManager.NewScore(score);
+        this.saveLoadManager.NewScore(this.newScore);
     }
 
     public void SaveGame()

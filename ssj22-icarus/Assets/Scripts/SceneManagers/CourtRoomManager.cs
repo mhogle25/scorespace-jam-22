@@ -76,6 +76,18 @@ public class CourtRoomManager : MonoBehaviour
         this.overlay.color -= new Color(this.overlay.color.r, this.overlay.color.g, this.overlay.color.b, this.overlayFadeRate);
     }
 
+    private void StateFadeOut()
+    {
+        if (!this.overlay.gameObject.activeSelf) this.overlay.gameObject.SetActive(true);
+
+        if (this.overlay.color.a > 1 - this.overlayFadeRate)
+        {
+            SceneManager.LoadScene("End Scene");
+        }
+
+        this.overlay.color += new Color(this.overlay.color.r, this.overlay.color.g, this.overlay.color.b, this.overlayFadeRate);
+    }
+
     private IEnumerator InitBegin()
     {
         yield return new WaitForSeconds(2);
@@ -144,17 +156,33 @@ public class CourtRoomManager : MonoBehaviour
 
     public void UpdateScore(string actionItem) {
         ResponseAction action = JsonConvert.DeserializeObject<ResponseAction>(actionItem);
-        currentScore.score += action.score;
-        currentScore.bribes += action.bribe;
-        currentScore.morale += action.morale;
+        IncrementScore(action.score);
+        IncrementBribes(action.bribe);
+        IncrementMorale(action.morale);
     }
 
-    public void UpdateScore(int value)
+    public void IncrementScore(int value)
     {
         if (currentScore.score < 1 && value < 0)
             return;
 
         currentScore.score += value;
+    }
+
+    public void IncrementBribes(int value)
+    {
+        if (currentScore.bribes < 1 && value < 0)
+            return;
+
+        currentScore.bribes += value;
+    }
+
+    public void IncrementMorale(int value)
+    {
+        if (currentScore.morale < 1 && value < 0)
+            return;
+
+        currentScore.morale += value;
     }
 
     private void PullLever()
@@ -179,7 +207,8 @@ public class CourtRoomManager : MonoBehaviour
 
     private void FinalizeGame()
     {
-
+        GlobalManager.Instance.newScore = this.currentScore;
+        this.state = StateFadeOut;
     }
 
     public void LoadMainMenu()

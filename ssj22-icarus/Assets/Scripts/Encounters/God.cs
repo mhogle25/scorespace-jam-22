@@ -75,8 +75,8 @@ public class God : MonoBehaviour
 
         this.dialogTextbox.Dialog(new List<string>
         {
-            $"[N:God][V:{this.voiceKey}][S:0.1]Bring to me what you have gathered",
-            "I hope I am not dissapointed[E]"
+            $"[N:God][V:{this.voiceKey}][S:0.1]Bring to me what you have gathered.",
+            "I hope I am not dissapointed.[E]"
         },
         0,
         () =>
@@ -103,6 +103,13 @@ public class God : MonoBehaviour
             Destroy(fallen.gameObject);
         }
 
+        this.dialogTextbox.Dialog(new List<string>
+        {
+            $"[N:God][V:{this.voiceKey}][S:0.1]You are dismissed. See you next Tuesday."
+        },
+        0
+        );
+
         this.dialogTextbox.OnEndOfQueuedDialogs.AddListener(() =>
         {
             FinalizeGod();
@@ -113,6 +120,6 @@ public class God : MonoBehaviour
 
     private void FinalizeGod()
     {
-
+        this.callback?.Invoke();
     }
 }
