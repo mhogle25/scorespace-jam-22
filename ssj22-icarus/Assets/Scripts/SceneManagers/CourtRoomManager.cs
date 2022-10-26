@@ -20,6 +20,7 @@ public class CourtRoomManager : MonoBehaviour
     [SerializeField] private Transform background = null;
     [SerializeField] private Lever lever = null;
     [SerializeField] private TextMeshProUGUI scoreDisplay = null;
+    [SerializeField] private TextMeshProUGUI scoreIndicator = null;
     [SerializeField] private DisplayOverlay displayOverlay = null;
     [Header("Audio")]
     [SerializeField] private AudioSource musicSource = null;
@@ -159,11 +160,12 @@ public class CourtRoomManager : MonoBehaviour
         IncrementScore(action.score);
         IncrementBribes(action.bribe);
         IncrementMorale(action.morale);
+        EnableScoreIndicator(action);
     }
 
     public void IncrementScore(int value)
     {
-        if (currentScore.score < 1 && value < 0)
+        if (currentScore.score <= 0 && value < 0)
             return;
 
         currentScore.score += value;
@@ -171,7 +173,7 @@ public class CourtRoomManager : MonoBehaviour
 
     public void IncrementBribes(int value)
     {
-        if (currentScore.bribes < 1 && value < 0)
+        if (currentScore.bribes <= 0 && value < 0)
             return;
 
         currentScore.bribes += value;
@@ -179,10 +181,28 @@ public class CourtRoomManager : MonoBehaviour
 
     public void IncrementMorale(int value)
     {
-        if (currentScore.morale < 1 && value < 0)
+        if (currentScore.morale <= 0 && value < 0)
             return;
 
         currentScore.morale += value;
+    }
+
+    private void EnableScoreIndicator(ResponseAction responseAction)
+    {
+        scoreIndicator.gameObject.SetActive(true);
+        if (responseAction.score != 0)
+        { scoreIndicator.text = responseAction.score > 0 ? $"+{responseAction.score}\n" : $"-{responseAction.score}\n"; }
+        else
+        { scoreIndicator.text = "\n"; }
+        if (responseAction.bribe != 0)
+            scoreIndicator.text += responseAction.bribe > 0 ? $"+{responseAction.bribe}" : $"-{responseAction.bribe}";
+        StartCoroutine(HideScoreIndicator());
+    }
+
+    private IEnumerator HideScoreIndicator()
+    {
+        yield return new WaitForSeconds(1);
+        this.scoreIndicator.gameObject.SetActive(false);
     }
 
     private void PullLever()
