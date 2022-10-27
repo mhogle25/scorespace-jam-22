@@ -1,0 +1,41 @@
+{
+    "amountToQueue": 4,
+    "initFallen":  
+    {
+        "dialogFileName": "Rufus",
+        "speed": 8,
+        "spriteKey": "neutral"
+    },
+    "fallen": [
+        {
+            "dialogFileName": "Anais",
+            "speed": 8,
+            "spriteKey": "smoking"
+        },
+        {
+            "dialogFileName": "Barabbas",
+            "speed": 8,
+            "spriteKey": "serious"
+        },
+        {
+            "dialogFileName": "Gabriel",
+            "speed": 8,
+            "spriteKey": "smoking"
+        },
+        {
+            "dialogFileName": "Giuseppe",
+            "speed": 8,
+            "spriteKey": "formal"
+        },
+        {
+            "dialogFileName": "Jebediah",
+            "speed": 8,
+            "spriteKey": "casual"
+        },
+        {
+            "dialogFileName": "Kassandra",
+            "speed": 8,
+            "spriteKey": "neutral"
+        }
+    ]
+}

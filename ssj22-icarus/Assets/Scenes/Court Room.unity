@@ -2975,6 +2975,7 @@ GameObject:
   - component: {fileID: 1066859609}
   - component: {fileID: 1066859608}
   - component: {fileID: 1066859610}
+  - component: {fileID: 1066859611}
   m_Layer: 0
   m_Name: Court Room Manager
   m_TagString: Untagged
@@ -2995,14 +2996,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   god: {fileID: 74745292}
-  initFallenPrefab: {fileID: 8555457058165799007, guid: dbe7e2260e162114b99929ecf25e1266, type: 3}
-  fallenPrefabs:
-  - {fileID: 8555457058165799007, guid: 952cebddf5f8170419f71038351756fc, type: 3}
-  - {fileID: 8555457058165799007, guid: 03e2a7e1631ae15499380b1c161c95c4, type: 3}
-  - {fileID: 8555457058165799007, guid: e86a8455778cf174e90c9d0df3098c82, type: 3}
-  - {fileID: 8555457058165799007, guid: 1ce8e41c69c6982448f1eae0ba0ee291, type: 3}
-  - {fileID: 8555457058165799007, guid: a9496024d976c8741a09b682ce953436, type: 3}
-  - {fileID: 8555457058165799007, guid: 9429f981149caff4ca3be50eaf89177d, type: 3}
+  fallenPrefab: {fileID: 8555457058165799007, guid: 952cebddf5f8170419f71038351756fc, type: 3}
+  fallenSpriteCollection: {fileID: 1066859611}
   dialogTextbox: {fileID: 1492842867}
   background: {fileID: 475916552}
   lever: {fileID: 1660943746}
@@ -3013,7 +3008,6 @@ MonoBehaviour:
   song: {fileID: 8300000, guid: 264bab8c89349644c9af624e0966761c, type: 3}
   overlay: {fileID: 779517587}
   overlayFadeRate: 0.01
-  amountToQueue: 4
 --- !u!4 &1066859609
 Transform:
   m_ObjectHideFlags: 0
@@ -3125,6 +3119,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1066859611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066859607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9bf060d4c84c8346a50eef68a3319f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 8f2998a08530dfa4ca1fb88f7c403959, type: 3}
+  - {fileID: 21300000, guid: e2c05f700a651134bb9f422d978ec835, type: 3}
+  - {fileID: 21300000, guid: 589bb2b8f396c864f9a4b57042fa9f65, type: 3}
+  - {fileID: 21300000, guid: d2f781967c05d344eae9b00e4b2d61da, type: 3}
+  - {fileID: 21300000, guid: 1f003688383c9b54a88083aa54c5b445, type: 3}
 --- !u!1 &1139913615
 GameObject:
   m_ObjectHideFlags: 0

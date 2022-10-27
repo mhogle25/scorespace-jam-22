@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class Fallen : MonoBehaviour
 {
     public string DialogFileName
@@ -12,9 +13,35 @@ public class Fallen : MonoBehaviour
         {
             return this.dialogFileName;
         }
+
+        set
+        {
+            this.dialogFileName = value;
+        }
+    }
+
+    public float Speed
+    {
+        get
+        {
+            return this.speed;
+        }
+        set
+        {
+            this.speed = value;
+        }
+    }
+
+    public SpriteRenderer SpriteRenderer
+    {
+        get
+        {
+            return this.spriteRenderer;
+        }
     }
     [SerializeField] private string dialogFileName = string.Empty;
     [SerializeField] private float speed = 8f;
+    private SpriteRenderer spriteRenderer;
 
     public readonly UnityEvent onDeath = new();
     private BF2D.UI.DialogTextbox dialogTextbox = null;
@@ -22,6 +49,11 @@ public class Fallen : MonoBehaviour
     private Action callback = null;
 
     private Action state;
+
+    private void Awake()
+    {
+        this.spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+    }
 
     private void Update()
     {

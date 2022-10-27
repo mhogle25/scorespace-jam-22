@@ -1,7 +1,7 @@
 using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,8 +13,8 @@ public class CourtRoomManager : MonoBehaviour
 {
     [SerializeField] private God god = null;
     [Header("Fallen")]
-    [SerializeField] private Fallen initFallenPrefab = null;
-    [SerializeField] private List<Fallen> fallenPrefabs = new();
+    [SerializeField] private Fallen fallenPrefab = null;
+    [SerializeField] private BF2D.SpriteCollection fallenSpriteCollection = null;
     [Header("Graphic References")]
     [SerializeField] private BF2D.UI.DialogTextbox dialogTextbox;
     [SerializeField] private Transform background = null;
@@ -28,9 +28,9 @@ public class CourtRoomManager : MonoBehaviour
     [Header("Misc")]
     [SerializeField] private Image overlay = null;
     [SerializeField] private float overlayFadeRate = 0.01f;
-    [SerializeField] private int amountToQueue = 4;
 
-    private readonly Queue<Fallen> fallenQueue = new();
+    private Register register = new();
+    private readonly Queue<FallenData> fallenQueue = new();
     private readonly Stack<Fallen> fallenBin = new();
 
     public Score GetScore
@@ -49,11 +49,28 @@ public class CourtRoomManager : MonoBehaviour
         public int bribe;
     }
 
+    struct FallenData
+    {
+        public string dialogFileName;
+        public float speed;
+        public string spriteKey;
+    }
+
+    struct Register
+    {
+        public int amountToQueue;
+        public FallenData initFallen;
+        public List<FallenData> fallen;
+    }
+
     Action state;
 
     private void Awake()
     {
         state = StateFadeIn;
+
+        string json = BF2D.Utilities.TextFile.LoadFile(Path.Combine(Application.streamingAssetsPath, "Dialog", "Dialogs", "register.json"));
+        this.register = JsonConvert.DeserializeObject<Register>(json);
     }
 
     private void Update()
@@ -94,10 +111,10 @@ public class CourtRoomManager : MonoBehaviour
         yield return new WaitForSeconds(2);
         dialogTextbox.Message("[V:medium][N:Inquisitor][S:0.1]Have the first fallen enter.", () =>
         {
-            this.fallenQueue.Enqueue(this.initFallenPrefab);
+            this.fallenQueue.Enqueue(this.register.initFallen);
             System.Random rand = new System.Random();
-            List<Fallen> shuffled = this.fallenPrefabs.OrderBy(_ => rand.Next()).ToList();
-            for (int i = 0; i < this.amountToQueue; i++)
+            List<FallenData> shuffled = this.register.fallen.OrderBy(_ => rand.Next()).ToList();
+            for (int i = 0; i < this.register.amountToQueue; i++)
             {
                 this.fallenQueue.Enqueue(shuffled[i]);
             }
@@ -139,8 +156,11 @@ public class CourtRoomManager : MonoBehaviour
 
     private void StartNextFallen()
     {
-        Fallen fallen = this.fallenQueue.Dequeue();
-        fallen = Instantiate(fallen);
+        Fallen fallen = Instantiate(this.fallenPrefab);
+        FallenData data = this.fallenQueue.Dequeue();
+        fallen.DialogFileName = data.dialogFileName;
+        fallen.Speed = data.speed;
+        fallen.SpriteRenderer.sprite = this.fallenSpriteCollection[data.spriteKey];
         this.fallenBin.Push(fallen);
         fallen.transform.SetParent(this.background);
         fallen.transform.localScale = Vector3.one;

@@ -99,8 +99,9 @@ public class God : MonoBehaviour
         while (this.fallenBin.Count > 0)
         {
             Fallen fallen = this.fallenBin.Pop();
-            this.dialogTextbox.Dialog($"God-{fallen.DialogFileName}", 0);
-            Destroy(fallen.gameObject);
+            string fallenName = fallen.DialogFileName;
+            this.dialogTextbox.Dialog($"God-{fallenName}", 0);
+            Destroy(fallen);
         }
 
         this.dialogTextbox.Dialog(new List<string>
