@@ -21,6 +21,7 @@ public class CourtRoomManager : MonoBehaviour
     [SerializeField] private Lever lever = null;
     [SerializeField] private TextMeshProUGUI scoreDisplay = null;
     [SerializeField] private TextMeshProUGUI scoreIndicator = null;
+    [SerializeField] private TextMeshProUGUI bribeIndicator = null;
     [SerializeField] private DisplayOverlay displayOverlay = null;
     [Header("Audio")]
     [SerializeField] private AudioSource musicSource = null;
@@ -180,7 +181,6 @@ public class CourtRoomManager : MonoBehaviour
         IncrementScore(action.score);
         IncrementBribes(action.bribe);
         IncrementMorale(action.morale);
-        EnableScoreIndicator(action);
     }
 
     public void IncrementScore(int value)
@@ -188,6 +188,7 @@ public class CourtRoomManager : MonoBehaviour
         if (currentScore.score <= 0 && value < 0)
             return;
 
+        EnableIndicator(scoreIndicator, value);
         currentScore.score += value;
     }
 
@@ -196,6 +197,7 @@ public class CourtRoomManager : MonoBehaviour
         if (currentScore.bribes <= 0 && value < 0)
             return;
 
+        if (value != 0) EnableIndicator(bribeIndicator, value);
         currentScore.bribes += value;
     }
 
@@ -207,22 +209,18 @@ public class CourtRoomManager : MonoBehaviour
         currentScore.morale += value;
     }
 
-    private void EnableScoreIndicator(ResponseAction responseAction)
+    private void EnableIndicator(TextMeshProUGUI uGUI, int value)
     {
-        scoreIndicator.gameObject.SetActive(true);
-        if (responseAction.score != 0)
-        { scoreIndicator.text = responseAction.score > 0 ? $"+{responseAction.score}\n" : $"-{responseAction.score}\n"; }
-        else
-        { scoreIndicator.text = "\n"; }
-        if (responseAction.bribe != 0)
-            scoreIndicator.text += responseAction.bribe > 0 ? $"+{responseAction.bribe}" : $"-{responseAction.bribe}";
-        StartCoroutine(HideScoreIndicator());
+        uGUI.gameObject.SetActive(true);
+        uGUI.text = value > 0 ? $"+{value}" : $"-{value}";
+        StartCoroutine(HideIndicator(uGUI));
     }
 
-    private IEnumerator HideScoreIndicator()
+    private IEnumerator HideIndicator(TextMeshProUGUI uGUI)
     {
         yield return new WaitForSeconds(1);
-        this.scoreIndicator.gameObject.SetActive(false);
+        uGUI.text = string.Empty;
+        uGUI.gameObject.SetActive(false);
     }
 
     private void PullLever()
